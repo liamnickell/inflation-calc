@@ -12,6 +12,9 @@ class MainViewController: UIViewController {
 
 	@IBOutlet weak var infCalcBtn: UIButton!
 	@IBOutlet weak var infCalcBtnEuro: UIButton!
+	@IBOutlet weak var infCalcBtnGpb: UIButton!
+	@IBOutlet weak var infCalcBtnYen: UIButton!
+	@IBOutlet weak var infCalcBtnCad: UIButton!
 	@IBOutlet weak var infForcastCalcBtn: UIButton!
 	
     override func viewDidLoad() {
@@ -19,6 +22,10 @@ class MainViewController: UIViewController {
 		
 		infCalcBtn.layer.cornerRadius = 6
 		infForcastCalcBtn.layer.cornerRadius = 6
+		infCalcBtnEuro.layer.cornerRadius = 6
+		infCalcBtnGpb.layer.cornerRadius = 6
+		infCalcBtnYen.layer.cornerRadius = 6
+		infCalcBtnCad.layer.cornerRadius = 6
     }
 	
 	override func viewWillAppear(animated: Bool) {

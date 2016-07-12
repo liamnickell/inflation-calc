@@ -249,39 +249,44 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kmb-C0-I1S">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="87"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SQS-9w-7AD">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="81"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Inflation Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRj-UD-2Qh">
+                                                <rect key="frame" x="146" y="21" width="308" height="52"/>
+                                                <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="34"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.1363800252" green="0.70942455530000004" blue="0.94489820079999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="C1d-cp-dX0"/>
+                                            <constraint firstItem="ZRj-UD-2Qh" firstAttribute="centerX" secondItem="SQS-9w-7AD" secondAttribute="centerX" id="b2j-te-dst"/>
+                                            <constraint firstItem="ZRj-UD-2Qh" firstAttribute="top" secondItem="SQS-9w-7AD" secondAttribute="top" constant="32" id="sPK-Ct-SOl"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="0.075822062499999995" green="0.68240451560000004" blue="0.84442077019999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="SQS-9w-7AD" firstAttribute="leading" secondItem="Kmb-C0-I1S" secondAttribute="leading" id="A0m-jp-qAy"/>
                                     <constraint firstAttribute="height" constant="87" id="lK6-nb-sNZ"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SQS-9w-7AD">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="81"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Inflation Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRj-UD-2Qh">
-                                        <rect key="frame" x="146" y="21" width="308" height="52"/>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="32"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.1363800252" green="0.70942455530000004" blue="0.94489820079999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="C1d-cp-dX0"/>
-                                    <constraint firstItem="ZRj-UD-2Qh" firstAttribute="centerX" secondItem="SQS-9w-7AD" secondAttribute="centerX" id="b2j-te-dst"/>
-                                    <constraint firstItem="ZRj-UD-2Qh" firstAttribute="top" secondItem="SQS-9w-7AD" secondAttribute="top" constant="30" id="sPK-Ct-SOl"/>
+                                    <constraint firstAttribute="trailing" secondItem="SQS-9w-7AD" secondAttribute="trailing" id="o1k-Rq-qFN"/>
+                                    <constraint firstItem="SQS-9w-7AD" firstAttribute="top" secondItem="Kmb-C0-I1S" secondAttribute="top" id="up3-Yv-gXI"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fDM-k8-Ur2">
-                                <rect key="frame" x="20" y="124" width="560" height="452"/>
+                                <rect key="frame" x="20" y="119" width="560" height="478"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMs-Ef-KFs">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="83"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="72"/>
                                         <color key="backgroundColor" red="0.2457696365" green="0.78956940050000002" blue="0.97301863200000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="760-5l-sDf"/>
                                             <constraint firstAttribute="width" constant="400" id="YSy-eW-d2s"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="44"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="40"/>
                                         <state key="normal" title="USD">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -290,49 +295,61 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3d-xp-6q5">
-                                        <rect key="frame" x="0.0" y="93" width="560" height="83"/>
+                                        <rect key="frame" x="0.0" y="82" width="560" height="71"/>
                                         <color key="backgroundColor" red="0.2457696365" green="0.78956940050000002" blue="0.97301863200000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="400" id="Dhf-x5-ztG"/>
                                             <constraint firstAttribute="height" constant="80" id="uOb-Sc-Duh"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="44"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="40"/>
                                         <state key="normal" title="Euro">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lK-dk-pYK">
-                                        <rect key="frame" x="0.0" y="185" width="560" height="82"/>
+                                        <rect key="frame" x="0.0" y="163" width="560" height="72"/>
                                         <color key="backgroundColor" red="0.2457696365" green="0.78956940050000002" blue="0.97301863200000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="400" id="Yxy-fV-SIb"/>
                                             <constraint firstAttribute="height" constant="80" id="ca3-hu-t4C"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="44"/>
-                                        <state key="normal" title="BPS">
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="40"/>
+                                        <state key="normal" title="GBP">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4z-Zw-N0V">
+                                        <rect key="frame" x="0.0" y="244" width="560" height="72"/>
+                                        <color key="backgroundColor" red="0.2457696365" green="0.78956940050000002" blue="0.97301863200000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="0q4-PR-yVA"/>
+                                            <constraint firstAttribute="width" constant="400" id="WTP-1w-c1I"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="40"/>
+                                        <state key="normal" title="CAD">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kz-aB-N0W">
-                                        <rect key="frame" x="0.0" y="277" width="560" height="83"/>
+                                        <rect key="frame" x="0.0" y="326" width="560" height="71"/>
                                         <color key="backgroundColor" red="0.2457696365" green="0.78956940050000002" blue="0.97301863200000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="eQj-sM-9fe"/>
                                             <constraint firstAttribute="width" constant="400" id="g13-Vf-xvQ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="44"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="40"/>
                                         <state key="normal" title="Yen">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLb-ue-gQN">
-                                        <rect key="frame" x="0.0" y="370" width="560" height="83"/>
+                                        <rect key="frame" x="0.0" y="407" width="560" height="72"/>
                                         <color key="backgroundColor" red="0.24576963651315786" green="0.78956940046841995" blue="0.97301863204210526" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="CLH-QZ-Ay6"/>
                                             <constraint firstAttribute="width" constant="400" id="FO7-ib-e04"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="35"/>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="36"/>
                                         <state key="normal" title="Forcasting">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -342,15 +359,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SQS-9w-7AD" firstAttribute="top" secondItem="MoI-l4-z2A" secondAttribute="top" id="ApX-R3-Yf8"/>
-                            <constraint firstItem="SQS-9w-7AD" firstAttribute="leading" secondItem="MoI-l4-z2A" secondAttribute="leading" id="Jhw-mD-LEZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fDM-k8-Ur2" secondAttribute="trailing" id="M2J-NX-8Gw"/>
                             <constraint firstItem="fDM-k8-Ur2" firstAttribute="centerY" secondItem="MoI-l4-z2A" secondAttribute="centerY" id="XNw-Pn-NBq"/>
-                            <constraint firstItem="90F-lK-fV0" firstAttribute="top" secondItem="fDM-k8-Ur2" secondAttribute="bottom" constant="30" id="Yb6-qn-tWt"/>
+                            <constraint firstItem="90F-lK-fV0" firstAttribute="top" secondItem="fDM-k8-Ur2" secondAttribute="bottom" constant="20" id="Yb6-qn-tWt"/>
                             <constraint firstItem="Kmb-C0-I1S" firstAttribute="top" secondItem="MoI-l4-z2A" secondAttribute="top" id="e6C-ZT-g1z"/>
-                            <constraint firstItem="fDM-k8-Ur2" firstAttribute="top" secondItem="Kmb-C0-I1S" secondAttribute="bottom" constant="31" id="eaN-NH-uG1"/>
+                            <constraint firstItem="fDM-k8-Ur2" firstAttribute="top" secondItem="Kmb-C0-I1S" secondAttribute="bottom" constant="15" id="eaN-NH-uG1"/>
                             <constraint firstItem="Kmb-C0-I1S" firstAttribute="leading" secondItem="MoI-l4-z2A" secondAttribute="leading" id="ek3-fO-hpi"/>
-                            <constraint firstAttribute="trailing" secondItem="SQS-9w-7AD" secondAttribute="trailing" id="hdZ-zf-fmH"/>
                             <constraint firstAttribute="trailing" secondItem="Kmb-C0-I1S" secondAttribute="trailing" id="txU-JO-6o6"/>
                             <constraint firstItem="fDM-k8-Ur2" firstAttribute="leading" secondItem="MoI-l4-z2A" secondAttribute="leadingMargin" id="u2V-Zn-j9h"/>
                             <constraint firstItem="fDM-k8-Ur2" firstAttribute="centerX" secondItem="MoI-l4-z2A" secondAttribute="centerX" id="yBB-rs-iEP"/>
@@ -364,6 +378,10 @@
                     <navigationItem key="navigationItem" id="28B-Gq-mPP"/>
                     <connections>
                         <outlet property="infCalcBtn" destination="DMs-Ef-KFs" id="A4E-GN-OU2"/>
+                        <outlet property="infCalcBtnCad" destination="R4z-Zw-N0V" id="fAe-ha-qTf"/>
+                        <outlet property="infCalcBtnEuro" destination="o3d-xp-6q5" id="jRu-xA-E85"/>
+                        <outlet property="infCalcBtnGpb" destination="9lK-dk-pYK" id="59q-bX-wPk"/>
+                        <outlet property="infCalcBtnYen" destination="6Kz-aB-N0W" id="uEZ-87-8gP"/>
                         <outlet property="infForcastCalcBtn" destination="iLb-ue-gQN" id="Wmn-Ig-8gH"/>
                     </connections>
                 </viewController>

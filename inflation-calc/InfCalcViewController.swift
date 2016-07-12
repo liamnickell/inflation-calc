@@ -22,7 +22,7 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	var bottomYear = 2016
 	var maxYear = 1776
 	
-	let destinationPath = "/Users/liamnickell/Documents/Programming/iOS/Projects/inflation-calc/inflation-calc/CPI-Data.txt"
+	let path = NSBundle.mainBundle().pathForResource("CPI-Data", ofType: "txt")
 	
 	var percentChange = 0.0
 	var storedTextFieldContent = ""
@@ -35,12 +35,14 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 		
 		if let textFieldText = inputTextField.text, textFieldAsDouble = Double(textFieldText) {
 			if percentChange > 0.0 {
-				textLbl.text = String(format: "%.2f", textFieldAsDouble + (textFieldAsDouble * percentChange))
+				let value = textFieldAsDouble + (textFieldAsDouble * percentChange)
+				textLbl.text = String(format: "%.2f", value)
 			} else {
 				percentChange *= -1.0
 				
 				if round((textFieldAsDouble - (textFieldAsDouble * percentChange)) * 100) / 100 > 0.0 {
-					textLbl.text = String(format: "%.2f", textFieldAsDouble - (textFieldAsDouble * percentChange))
+					let value = textFieldAsDouble - (textFieldAsDouble * percentChange)
+					textLbl.text = String(format: "%.2f", value)
 				} else {
 					textLbl.text = "0.00"
 				}
@@ -89,11 +91,15 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	
 	func findCpiData() {
 		do {
-			let fileData = try String(contentsOfFile: destinationPath, encoding: NSUTF8StringEncoding)
-			let fileDataByLine = fileData.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+			if let pathToFile = path {
+				let fileData = try String(contentsOfFile: pathToFile, encoding: NSUTF8StringEncoding)
+				let fileDataByLine = fileData.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
 			
-			if let initialCpi = Double(fileDataByLine[topYear-maxYear]), finalCpi = Double(fileDataByLine[bottomYear-maxYear]) {
-				percentChange = (finalCpi - initialCpi) / initialCpi
+				if let initialCpi = Double(fileDataByLine[topYear-maxYear]), finalCpi = Double(fileDataByLine[bottomYear-maxYear]) {
+					percentChange = (finalCpi - initialCpi) / initialCpi
+				}
+			} else {
+				self.presentViewController(unknownError, animated: true, completion: nil)
 			}
 		} catch let error as NSError {
 			print("\(error)")
