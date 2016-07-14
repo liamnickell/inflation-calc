@@ -20,7 +20,7 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	var years = [Int]()
 	var topYear = 2016
 	var bottomYear = 2016
-	var maxYear = 1776
+	var maxYear = 1774
 	
 	let path = NSBundle.mainBundle().pathForResource("CPI-Data", ofType: "txt")
 	
@@ -115,19 +115,19 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	
 	func addDoneButtonOnKeyboard() {
 		let doneToolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
-		doneToolbar.barStyle = UIBarStyle.Default
+		doneToolbar.barStyle = UIBarStyle.BlackOpaque
 		doneToolbar.translucent = true
 		
 		let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
 		let done = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: Selector("doneBtnPressed"))
 		let cancel = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelBtnPressed")
 		
-		var items = [AnyObject]()
+		var items = [UIBarButtonItem]()
 		items.append(cancel)
 		items.append(flexSpace)
 		items.append(done)
 		
-		doneToolbar.items = (items as! [UIBarButtonItem])
+		doneToolbar.items = items
 		doneToolbar.userInteractionEnabled = true
 		doneToolbar.sizeToFit()
 		
