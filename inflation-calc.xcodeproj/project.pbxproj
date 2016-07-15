@@ -14,6 +14,7 @@
 		557009EA1D374FCE000B3DBC /* EU-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 557009E61D374FCE000B3DBC /* EU-CPI-Data.txt */; };
 		557009EB1D374FCE000B3DBC /* Japan-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 557009E71D374FCE000B3DBC /* Japan-CPI-Data.txt */; };
 		557009EC1D374FCE000B3DBC /* UK-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 557009E81D374FCE000B3DBC /* UK-CPI-Data.txt */; };
+		557009EF1D38A677000B3DBC /* MEX-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 557009EE1D38A677000B3DBC /* MEX-CPI-Data.txt */; };
 		55E930691D27C63800300FF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E930681D27C63800300FF7 /* AppDelegate.swift */; };
 		55E9306B1D27C63800300FF7 /* InfCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9306A1D27C63800300FF7 /* InfCalcViewController.swift */; };
 		55E9306E1D27C63800300FF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55E9306C1D27C63800300FF7 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		557009E61D374FCE000B3DBC /* EU-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "EU-CPI-Data.txt"; sourceTree = "<group>"; };
 		557009E71D374FCE000B3DBC /* Japan-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Japan-CPI-Data.txt"; sourceTree = "<group>"; };
 		557009E81D374FCE000B3DBC /* UK-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UK-CPI-Data.txt"; sourceTree = "<group>"; };
+		557009EE1D38A677000B3DBC /* MEX-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "MEX-CPI-Data.txt"; sourceTree = "<group>"; };
 		55E930651D27C63800300FF7 /* inflation-calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "inflation-calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E930681D27C63800300FF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55E9306A1D27C63800300FF7 /* InfCalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfCalcViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				557009E61D374FCE000B3DBC /* EU-CPI-Data.txt */,
 				557009E71D374FCE000B3DBC /* Japan-CPI-Data.txt */,
 				557009E81D374FCE000B3DBC /* UK-CPI-Data.txt */,
+				557009EE1D38A677000B3DBC /* MEX-CPI-Data.txt */,
 			);
 			path = "inflation-calc";
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				55E930731D27C63800300FF7 /* LaunchScreen.storyboard in Resources */,
 				550262491D2C09D10099FB54 /* CPI-Data.txt in Resources */,
+				557009EF1D38A677000B3DBC /* MEX-CPI-Data.txt in Resources */,
 				55E930701D27C63800300FF7 /* Assets.xcassets in Resources */,
 				557009EA1D374FCE000B3DBC /* EU-CPI-Data.txt in Resources */,
 				55E9306E1D27C63800300FF7 /* Main.storyboard in Resources */,

@@ -44,10 +44,10 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="206"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="cEm-eO-p6G">
-                                                        <rect key="frame" x="59" y="0.0" width="443" height="50"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbc-Ib-Qdf">
-                                                                <rect key="frame" x="0.0" y="0.0" width="20" height="50"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbc-Ib-Qdf">
+                                                                <rect key="frame" x="0.0" y="0.0" width="137" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="20" id="E9d-O5-BeO"/>
                                                                     <constraint firstAttribute="height" constant="50" id="ZBd-YD-siT"/>
@@ -56,8 +56,8 @@
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input value here" textAlignment="natural" minimumFontSize="30" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nrJ-k9-KaD">
-                                                                <rect key="frame" x="23" y="0.0" width="420" height="50"/>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input value here" textAlignment="natural" minimumFontSize="30" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nrJ-k9-KaD">
+                                                                <rect key="frame" x="140" y="10" width="420" height="30"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="420" id="G6m-19-Fys"/>
@@ -67,7 +67,7 @@
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" keyboardAppearance="alert"/>
                                                             </textField>
                                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="€" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSo-4g-vrZ">
-                                                                <rect key="frame" x="443" y="0.0" width="0.0" height="50"/>
+                                                                <rect key="frame" x="560" y="0.0" width="0.0" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="20" id="CGj-P7-HmM"/>
                                                                     <constraint firstAttribute="height" constant="50" id="QKC-Iy-wAN"/>
@@ -213,6 +213,7 @@
                         <outlet property="bottomPickerView" destination="syL-EK-uBg" id="0k1-Yb-kM0"/>
                         <outlet property="calcBtn" destination="dlV-Sm-fla" id="faZ-Pm-lDJ"/>
                         <outlet property="calculationView" destination="BQl-UA-BLd" id="uX8-Jc-1a5"/>
+                        <outlet property="currencySymbolLbl" destination="pbc-Ib-Qdf" id="hn8-QD-HZn"/>
                         <outlet property="inputTextField" destination="nrJ-k9-KaD" id="iJZ-k3-x8a"/>
                         <outlet property="textLbl" destination="zti-Ex-dcb" id="dfV-lM-9Bs"/>
                         <outlet property="topPickerView" destination="wwQ-zk-wU8" id="Iux-jm-7rN"/>
@@ -290,7 +291,7 @@
                                 <rect key="frame" x="20" y="119" width="560" height="478"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMs-Ef-KFs">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="72"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="60"/>
                                         <color key="backgroundColor" red="0.2457696365" green="0.78956940050000002" blue="0.97301863200000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="760-5l-sDf"/>
@@ -304,20 +305,23 @@
                                             <segue destination="BYZ-38-t0r" kind="show" id="czq-gj-4qE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3d-xp-6q5">
-                                        <rect key="frame" x="0.0" y="82" width="560" height="71"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3d-xp-6q5">
+                                        <rect key="frame" x="0.0" y="70" width="560" height="60"/>
                                         <color key="backgroundColor" red="0.2457696365" green="0.78956940050000002" blue="0.97301863200000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="400" id="Dhf-x5-ztG"/>
                                             <constraint firstAttribute="height" constant="80" id="uOb-Sc-Duh"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="40"/>
-                                        <state key="normal" title="Euro">
+                                        <state key="normal" title="EUR">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="ncz-3A-BLn"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lK-dk-pYK">
-                                        <rect key="frame" x="0.0" y="163" width="560" height="72"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lK-dk-pYK">
+                                        <rect key="frame" x="0.0" y="140" width="560" height="60"/>
                                         <color key="backgroundColor" red="0.2457696365" green="0.78956940050000002" blue="0.97301863200000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="400" id="Yxy-fV-SIb"/>
@@ -327,9 +331,12 @@
                                         <state key="normal" title="GBP">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="EwW-zz-Ocx"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4z-Zw-N0V">
-                                        <rect key="frame" x="0.0" y="244" width="560" height="72"/>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4z-Zw-N0V">
+                                        <rect key="frame" x="0.0" y="209" width="560" height="60"/>
                                         <color key="backgroundColor" red="0.2457696365" green="0.78956940050000002" blue="0.97301863200000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="0q4-PR-yVA"/>
@@ -339,21 +346,42 @@
                                         <state key="normal" title="CAD">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="GjS-ma-rST"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kz-aB-N0W">
-                                        <rect key="frame" x="0.0" y="326" width="560" height="71"/>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Kz-aB-N0W">
+                                        <rect key="frame" x="0.0" y="279" width="560" height="60"/>
                                         <color key="backgroundColor" red="0.2457696365" green="0.78956940050000002" blue="0.97301863200000005" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="eQj-sM-9fe"/>
                                             <constraint firstAttribute="width" constant="400" id="g13-Vf-xvQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="40"/>
-                                        <state key="normal" title="Yen">
+                                        <state key="normal" title="JPY">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="nAc-qX-tFp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHR-2R-Bd4">
+                                        <rect key="frame" x="0.0" y="349" width="560" height="60"/>
+                                        <color key="backgroundColor" red="0.2457696365" green="0.78956940050000002" blue="0.97301863200000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="LJc-sk-iQF"/>
+                                            <constraint firstAttribute="width" constant="400" id="ql0-hn-uuv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="40"/>
+                                        <state key="normal" title="MXN">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Vqg-sM-qb1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLb-ue-gQN">
-                                        <rect key="frame" x="0.0" y="407" width="560" height="72"/>
+                                        <rect key="frame" x="0.0" y="419" width="560" height="60"/>
                                         <color key="backgroundColor" red="0.24576963651315786" green="0.78956940046841995" blue="0.97301863204210526" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="CLH-QZ-Ay6"/>
@@ -391,7 +419,8 @@
                         <outlet property="infCalcBtnCad" destination="R4z-Zw-N0V" id="fAe-ha-qTf"/>
                         <outlet property="infCalcBtnEuro" destination="o3d-xp-6q5" id="jRu-xA-E85"/>
                         <outlet property="infCalcBtnGpb" destination="9lK-dk-pYK" id="59q-bX-wPk"/>
-                        <outlet property="infCalcBtnYen" destination="6Kz-aB-N0W" id="uEZ-87-8gP"/>
+                        <outlet property="infCalcBtnJpy" destination="6Kz-aB-N0W" id="ux9-Xl-4je"/>
+                        <outlet property="infCalcBtnMxn" destination="GHR-2R-Bd4" id="FkY-rL-oM2"/>
                         <outlet property="infForcastCalcBtn" destination="iLb-ue-gQN" id="Wmn-Ig-8gH"/>
                     </connections>
                 </viewController>
@@ -425,4 +454,7 @@
     <resources>
         <image name="info-icon-edited" width="102" height="102"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ncz-3A-BLn"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -13,6 +13,7 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	@IBOutlet weak var calculationView: UIView!
 	@IBOutlet weak var calcBtn: UIButton!
 	@IBOutlet weak var inputTextField: UITextField!
+	@IBOutlet weak var currencySymbolLbl:UILabel!
 	@IBOutlet weak var textLbl: UILabel!
 	@IBOutlet weak var topPickerView: UIPickerView!
 	@IBOutlet weak var bottomPickerView: UIPickerView!
@@ -22,7 +23,10 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	var bottomYear = 2016
 	var maxYear = 1774
 	
-	let path = NSBundle.mainBundle().pathForResource("CPI-Data", ofType: "txt")
+	var currencySymbol = ""
+	var reverseFileOrder = false
+	
+	var path = NSBundle.mainBundle().pathForResource("CPI-Data", ofType: "txt")
 	
 	var percentChange = 0.0
 	var storedTextFieldContent = ""
@@ -89,11 +93,25 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 		textLbl.adjustsFontSizeToFitWidth = true
 	}
 	
+	override func viewDidAppear(animated: Bool) {
+		currencySymbolLbl.text = currencySymbol
+	}
+	
+	override func viewDidDisappear(animated: Bool) {
+		currencySymbolLbl.text = ""
+	}
+	
 	func findCpiData() {
 		do {
 			if let pathToFile = path {
 				let fileData = try String(contentsOfFile: pathToFile, encoding: NSUTF8StringEncoding)
-				let fileDataByLine = fileData.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+				var fileDataByLine: [String]
+				
+				if reverseFileOrder {
+					fileDataByLine = fileData.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet()).reverse()
+				} else {
+					fileDataByLine = fileData.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
+				}
 			
 				if let initialCpi = Double(fileDataByLine[topYear-maxYear]), finalCpi = Double(fileDataByLine[bottomYear-maxYear]) {
 					percentChange = (finalCpi - initialCpi) / initialCpi
@@ -109,7 +127,7 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	
 	func addCurrencyModifier(textLabel: String?) {
 		if let text = textLabel {
-			textLbl.text = "$ " + text
+			textLbl.text = currencySymbol + " " + text
 		}
 	}
 	
@@ -167,4 +185,3 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 		}
 	}
 }
-
