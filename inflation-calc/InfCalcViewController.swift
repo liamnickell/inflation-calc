@@ -23,7 +23,7 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	var bottomYear = 2016
 	var maxYear = 1774
 	
-	var currencySymbol = "$"
+	var currencySymbol = ""
 	var reverseFileOrder = false
 	
 	var path = NSBundle.mainBundle().pathForResource("CPI-Data", ofType: "txt")
@@ -93,7 +93,7 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 		textLbl.adjustsFontSizeToFitWidth = true
 	}
 	
-	override func viewDidAppear(animated: Bool) {
+	override func viewWillAppear(animated: Bool) {
 		currencySymbolLbl.text = currencySymbol
 	}
 	

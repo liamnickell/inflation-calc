@@ -17,13 +17,13 @@ class MainViewController: UIViewController {
 	@IBOutlet weak var infCalcBtnJpy: UIButton!
 	@IBOutlet weak var infCalcBtnCad: UIButton!
 	@IBOutlet weak var infCalcBtnMxn: UIButton!
-	@IBOutlet weak var infForcastCalcBtn: UIButton!
+	@IBOutlet weak var infForecastCalcBtn: UIButton!
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
 		infCalcBtn.layer.cornerRadius = 6
-		infForcastCalcBtn.layer.cornerRadius = 6
+		infForecastCalcBtn.layer.cornerRadius = 6
 		infCalcBtnEuro.layer.cornerRadius = 6
 		infCalcBtnGpb.layer.cornerRadius = 6
 		infCalcBtnJpy.layer.cornerRadius = 6

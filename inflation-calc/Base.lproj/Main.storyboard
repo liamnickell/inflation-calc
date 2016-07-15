@@ -388,7 +388,7 @@
                                             <constraint firstAttribute="width" constant="400" id="FO7-ib-e04"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="TrebuchetMS-Bold" family="Trebuchet MS" pointSize="35"/>
-                                        <state key="normal" title="Forcasting">
+                                        <state key="normal" title="Forecasting">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
@@ -422,7 +422,7 @@
                         <outlet property="infCalcBtnGpb" destination="9lK-dk-pYK" id="59q-bX-wPk"/>
                         <outlet property="infCalcBtnJpy" destination="6Kz-aB-N0W" id="ux9-Xl-4je"/>
                         <outlet property="infCalcBtnMxn" destination="GHR-2R-Bd4" id="FkY-rL-oM2"/>
-                        <outlet property="infForcastCalcBtn" destination="iLb-ue-gQN" id="Wmn-Ig-8gH"/>
+                        <outlet property="infForecastCalcBtn" destination="iLb-ue-gQN" id="cqS-nM-cot"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seR-Hx-7PX" userLabel="First Responder" sceneMemberID="firstResponder"/>
