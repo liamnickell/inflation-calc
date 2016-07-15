@@ -57,7 +57,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input value here" textAlignment="natural" minimumFontSize="30" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nrJ-k9-KaD">
-                                                                <rect key="frame" x="140" y="10" width="420" height="30"/>
+                                                                <rect key="frame" x="140" y="0.0" width="420" height="50"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="420" id="G6m-19-Fys"/>
@@ -66,16 +66,6 @@
                                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="30"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" keyboardAppearance="alert"/>
                                                             </textField>
-                                                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="€" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QSo-4g-vrZ">
-                                                                <rect key="frame" x="560" y="0.0" width="0.0" height="50"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="20" id="CGj-P7-HmM"/>
-                                                                    <constraint firstAttribute="height" constant="50" id="QKC-Iy-wAN"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="32"/>
-                                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="Yq4-U1-ZHa"/>
