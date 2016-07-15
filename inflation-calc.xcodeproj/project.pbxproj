@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		550262491D2C09D10099FB54 /* CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 550262481D2C09D10099FB54 /* CPI-Data.txt */; };
 		5502624D1D2D4C480099FB54 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5502624C1D2D4C480099FB54 /* InfoViewController.swift */; };
 		55389B841D2FD704004CCE5B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55389B831D2FD704004CCE5B /* MainViewController.swift */; };
-		557009E91D374FCE000B3DBC /* CAD-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 557009E51D374FCE000B3DBC /* CAD-CPI-Data.txt */; };
-		557009EA1D374FCE000B3DBC /* EU-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 557009E61D374FCE000B3DBC /* EU-CPI-Data.txt */; };
-		557009EB1D374FCE000B3DBC /* Japan-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 557009E71D374FCE000B3DBC /* Japan-CPI-Data.txt */; };
-		557009EC1D374FCE000B3DBC /* UK-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 557009E81D374FCE000B3DBC /* UK-CPI-Data.txt */; };
-		557009EF1D38A677000B3DBC /* MEX-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 557009EE1D38A677000B3DBC /* MEX-CPI-Data.txt */; };
+		55700A121D38B32D000B3DBC /* CAD-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55700A0C1D38B32D000B3DBC /* CAD-CPI-Data.txt */; };
+		55700A131D38B32D000B3DBC /* CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55700A0D1D38B32D000B3DBC /* CPI-Data.txt */; };
+		55700A141D38B32D000B3DBC /* EU-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55700A0E1D38B32D000B3DBC /* EU-CPI-Data.txt */; };
+		55700A151D38B32D000B3DBC /* Japan-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55700A0F1D38B32D000B3DBC /* Japan-CPI-Data.txt */; };
+		55700A161D38B32D000B3DBC /* MEX-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55700A101D38B32D000B3DBC /* MEX-CPI-Data.txt */; };
+		55700A171D38B32D000B3DBC /* UK-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55700A111D38B32D000B3DBC /* UK-CPI-Data.txt */; };
 		55E930691D27C63800300FF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E930681D27C63800300FF7 /* AppDelegate.swift */; };
 		55E9306B1D27C63800300FF7 /* InfCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9306A1D27C63800300FF7 /* InfCalcViewController.swift */; };
 		55E9306E1D27C63800300FF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55E9306C1D27C63800300FF7 /* Main.storyboard */; };
@@ -23,14 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		550262481D2C09D10099FB54 /* CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "CPI-Data.txt"; path = "../../../../Users/liamnickell/Documents/Programming/iOS/Projects/inflation-calc/inflation-calc/CPI-Data.txt"; sourceTree = DEVELOPER_DIR; };
 		5502624C1D2D4C480099FB54 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		55389B831D2FD704004CCE5B /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		557009E51D374FCE000B3DBC /* CAD-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "CAD-CPI-Data.txt"; sourceTree = "<group>"; };
-		557009E61D374FCE000B3DBC /* EU-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "EU-CPI-Data.txt"; sourceTree = "<group>"; };
-		557009E71D374FCE000B3DBC /* Japan-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Japan-CPI-Data.txt"; sourceTree = "<group>"; };
-		557009E81D374FCE000B3DBC /* UK-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UK-CPI-Data.txt"; sourceTree = "<group>"; };
-		557009EE1D38A677000B3DBC /* MEX-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "MEX-CPI-Data.txt"; sourceTree = "<group>"; };
+		55700A0C1D38B32D000B3DBC /* CAD-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "CAD-CPI-Data.txt"; sourceTree = "<group>"; };
+		55700A0D1D38B32D000B3DBC /* CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "CPI-Data.txt"; sourceTree = "<group>"; };
+		55700A0E1D38B32D000B3DBC /* EU-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "EU-CPI-Data.txt"; sourceTree = "<group>"; };
+		55700A0F1D38B32D000B3DBC /* Japan-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Japan-CPI-Data.txt"; sourceTree = "<group>"; };
+		55700A101D38B32D000B3DBC /* MEX-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "MEX-CPI-Data.txt"; sourceTree = "<group>"; };
+		55700A111D38B32D000B3DBC /* UK-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UK-CPI-Data.txt"; sourceTree = "<group>"; };
 		55E930651D27C63800300FF7 /* inflation-calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "inflation-calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E930681D27C63800300FF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55E9306A1D27C63800300FF7 /* InfCalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfCalcViewController.swift; sourceTree = "<group>"; };
@@ -75,15 +75,15 @@
 				55E9306A1D27C63800300FF7 /* InfCalcViewController.swift */,
 				5502624C1D2D4C480099FB54 /* InfoViewController.swift */,
 				55E9306C1D27C63800300FF7 /* Main.storyboard */,
-				55E9306F1D27C63800300FF7 /* Assets.xcassets */,
 				55E930711D27C63800300FF7 /* LaunchScreen.storyboard */,
+				55E9306F1D27C63800300FF7 /* Assets.xcassets */,
+				55700A0C1D38B32D000B3DBC /* CAD-CPI-Data.txt */,
+				55700A0D1D38B32D000B3DBC /* CPI-Data.txt */,
+				55700A0E1D38B32D000B3DBC /* EU-CPI-Data.txt */,
+				55700A0F1D38B32D000B3DBC /* Japan-CPI-Data.txt */,
+				55700A101D38B32D000B3DBC /* MEX-CPI-Data.txt */,
+				55700A111D38B32D000B3DBC /* UK-CPI-Data.txt */,
 				55E930741D27C63800300FF7 /* Info.plist */,
-				550262481D2C09D10099FB54 /* CPI-Data.txt */,
-				557009E51D374FCE000B3DBC /* CAD-CPI-Data.txt */,
-				557009E61D374FCE000B3DBC /* EU-CPI-Data.txt */,
-				557009E71D374FCE000B3DBC /* Japan-CPI-Data.txt */,
-				557009E81D374FCE000B3DBC /* UK-CPI-Data.txt */,
-				557009EE1D38A677000B3DBC /* MEX-CPI-Data.txt */,
 			);
 			path = "inflation-calc";
 			sourceTree = "<group>";
@@ -147,15 +147,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55700A171D38B32D000B3DBC /* UK-CPI-Data.txt in Resources */,
+				55700A161D38B32D000B3DBC /* MEX-CPI-Data.txt in Resources */,
 				55E930731D27C63800300FF7 /* LaunchScreen.storyboard in Resources */,
-				550262491D2C09D10099FB54 /* CPI-Data.txt in Resources */,
-				557009EF1D38A677000B3DBC /* MEX-CPI-Data.txt in Resources */,
 				55E930701D27C63800300FF7 /* Assets.xcassets in Resources */,
-				557009EA1D374FCE000B3DBC /* EU-CPI-Data.txt in Resources */,
+				55700A131D38B32D000B3DBC /* CPI-Data.txt in Resources */,
+				55700A141D38B32D000B3DBC /* EU-CPI-Data.txt in Resources */,
+				55700A121D38B32D000B3DBC /* CAD-CPI-Data.txt in Resources */,
 				55E9306E1D27C63800300FF7 /* Main.storyboard in Resources */,
-				557009EC1D374FCE000B3DBC /* UK-CPI-Data.txt in Resources */,
-				557009E91D374FCE000B3DBC /* CAD-CPI-Data.txt in Resources */,
-				557009EB1D374FCE000B3DBC /* Japan-CPI-Data.txt in Resources */,
+				55700A151D38B32D000B3DBC /* Japan-CPI-Data.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 	
+	@IBOutlet weak var appTitle: UILabel!
 	@IBOutlet weak var infCalcBtn: UIButton!
 	@IBOutlet weak var infCalcBtnEuro: UIButton!
 	@IBOutlet weak var infCalcBtnGpb: UIButton!
@@ -28,6 +29,8 @@ class MainViewController: UIViewController {
 		infCalcBtnJpy.layer.cornerRadius = 6
 		infCalcBtnCad.layer.cornerRadius = 6
 		infCalcBtnMxn.layer.cornerRadius = 6
+		
+		appTitle.adjustsFontSizeToFitWidth = true
     }
 	
 	override func viewWillAppear(animated: Bool) {
