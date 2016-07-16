@@ -25,6 +25,7 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	
 	var currencySymbol = ""
 	var reverseFileOrder = false
+	var isYen = false
 	
 	var path = NSBundle.mainBundle().pathForResource("CPI-Data", ofType: "txt")
 	
@@ -39,14 +40,24 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 		
 		if let textFieldText = inputTextField.text, textFieldAsDouble = Double(textFieldText) {
 			if percentChange > 0.0 {
-				let value = textFieldAsDouble + (textFieldAsDouble * percentChange)
-				textLbl.text = String(format: "%.2f", value)
+				if !isYen {
+					let value = textFieldAsDouble + (textFieldAsDouble * percentChange)
+					textLbl.text = String(format: "%.2f", value)
+				} else {
+					let value = round(textFieldAsDouble + (textFieldAsDouble * percentChange))
+					textLbl.text = String(Int(value))
+				}
 			} else {
 				percentChange *= -1.0
 				
 				if round((textFieldAsDouble - (textFieldAsDouble * percentChange)) * 100) / 100 > 0.0 {
-					let value = textFieldAsDouble - (textFieldAsDouble * percentChange)
-					textLbl.text = String(format: "%.2f", value)
+					if !isYen {
+						let value = textFieldAsDouble - (textFieldAsDouble * percentChange)
+						textLbl.text = String(format: "%.2f", value)
+					} else {
+						let value = round(textFieldAsDouble - (textFieldAsDouble * percentChange))
+						textLbl.text = String(Int(value))
+					}
 				} else {
 					textLbl.text = "0.00"
 				}
@@ -95,6 +106,10 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	
 	override func viewWillAppear(animated: Bool) {
 		currencySymbolLbl.text = currencySymbol
+	}
+	
+	override func viewWillDisappear(animated: Bool) {
+		isYen = false
 	}
 	
 	func findCpiData() {

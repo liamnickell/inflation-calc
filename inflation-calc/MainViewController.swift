@@ -75,6 +75,7 @@ class MainViewController: UIViewController {
 			destinationViewController.maxYear = 1948
 			destinationViewController.currencySymbol = "¥"
 			destinationViewController.reverseFileOrder = true
+			destinationViewController.isYen = true
 		} else if btn.tag == 5 {
 			destinationViewController.title = "MXN Inflation"
 			destinationViewController.path = NSBundle.mainBundle().pathForResource("MEX-CPI-Data", ofType: "txt")
