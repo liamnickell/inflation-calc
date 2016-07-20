@@ -39,13 +39,20 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 		findCpiData()
 		
 		if let textFieldText = inputTextField.text, textFieldAsDouble = Double(textFieldText) {
+			let numberFormatter = NSNumberFormatter()
+			numberFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+			numberFormatter.currencySymbol = currencySymbol + " "
+			numberFormatter.minimumFractionDigits = 2
+			numberFormatter.maximumFractionDigits = 2
+			
 			if percentChange > 0.0 {
 				if !isYen {
 					let value = textFieldAsDouble + (textFieldAsDouble * percentChange)
-					textLbl.text = String(format: "%.2f", value)
+					textLbl.text = numberFormatter.stringFromNumber(value)
 				} else {
 					let value = round(textFieldAsDouble + (textFieldAsDouble * percentChange))
-					textLbl.text = String(Int(value))
+					numberFormatter.maximumFractionDigits = 0
+					textLbl.text = numberFormatter.stringFromNumber(value)
 				}
 			} else {
 				percentChange *= -1.0
@@ -53,18 +60,19 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 				if round((textFieldAsDouble - (textFieldAsDouble * percentChange)) * 100) / 100 > 0.0 {
 					if !isYen {
 						let value = textFieldAsDouble - (textFieldAsDouble * percentChange)
-						textLbl.text = String(format: "%.2f", value)
+						textLbl.text = numberFormatter.stringFromNumber(value)
 					} else {
 						let value = round(textFieldAsDouble - (textFieldAsDouble * percentChange))
-						textLbl.text = String(Int(value))
+						numberFormatter.maximumFractionDigits = 0
+						textLbl.text = numberFormatter.stringFromNumber(value)
 					}
-				} else {
+				} else if !isYen {
 					textLbl.text = "0.00"
+				} else {
+					textLbl.text = "0"
 				}
 			}
-			
-			addCurrencyModifier(textLbl.text)
-			
+
 			UIView.animateWithDuration(0.4, animations: {
 				self.calculationView.backgroundColor = UIColor(red: 0.0/255.0, green: 235.0/255.0, blue: 160.0/255.0, alpha: 1.0)
 			})
@@ -133,12 +141,6 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 		} catch let error as NSError {
 			print("\(error)")
 			self.presentViewController(unknownError, animated: true, completion: nil)
-		}
-	}
-	
-	func addCurrencyModifier(textLabel: String?) {
-		if let text = textLabel {
-			textLbl.text = currencySymbol + " " + text
 		}
 	}
 	

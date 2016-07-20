@@ -15,6 +15,7 @@
 		55700A151D38B32D000B3DBC /* Japan-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55700A0F1D38B32D000B3DBC /* Japan-CPI-Data.txt */; };
 		55700A161D38B32D000B3DBC /* MEX-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55700A101D38B32D000B3DBC /* MEX-CPI-Data.txt */; };
 		55700A171D38B32D000B3DBC /* UK-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55700A111D38B32D000B3DBC /* UK-CPI-Data.txt */; };
+		55700A191D3CBED2000B3DBC /* ForecastingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55700A181D3CBED2000B3DBC /* ForecastingViewController.swift */; };
 		55E930691D27C63800300FF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E930681D27C63800300FF7 /* AppDelegate.swift */; };
 		55E9306B1D27C63800300FF7 /* InfCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9306A1D27C63800300FF7 /* InfCalcViewController.swift */; };
 		55E9306E1D27C63800300FF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55E9306C1D27C63800300FF7 /* Main.storyboard */; };
@@ -31,7 +32,8 @@
 		55700A0F1D38B32D000B3DBC /* Japan-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Japan-CPI-Data.txt"; sourceTree = "<group>"; };
 		55700A101D38B32D000B3DBC /* MEX-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "MEX-CPI-Data.txt"; sourceTree = "<group>"; };
 		55700A111D38B32D000B3DBC /* UK-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UK-CPI-Data.txt"; sourceTree = "<group>"; };
-		55E930651D27C63800300FF7 /* inflation-calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "inflation-calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55700A181D3CBED2000B3DBC /* ForecastingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastingViewController.swift; sourceTree = "<group>"; };
+		55E930651D27C63800300FF7 /* Inflation Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inflation Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E930681D27C63800300FF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55E9306A1D27C63800300FF7 /* InfCalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfCalcViewController.swift; sourceTree = "<group>"; };
 		55E9306D1D27C63800300FF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,16 +57,16 @@
 			isa = PBXGroup;
 			children = (
 				55E930671D27C63800300FF7 /* inflation-calc */,
-				55E930661D27C63800300FF7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
 		55E930661D27C63800300FF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				55E930651D27C63800300FF7 /* inflation-calc.app */,
+				55E930651D27C63800300FF7 /* Inflation Calc.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		55E930671D27C63800300FF7 /* inflation-calc */ = {
@@ -73,6 +75,7 @@
 				55E930681D27C63800300FF7 /* AppDelegate.swift */,
 				55389B831D2FD704004CCE5B /* MainViewController.swift */,
 				55E9306A1D27C63800300FF7 /* InfCalcViewController.swift */,
+				55700A181D3CBED2000B3DBC /* ForecastingViewController.swift */,
 				5502624C1D2D4C480099FB54 /* InfoViewController.swift */,
 				55E9306C1D27C63800300FF7 /* Main.storyboard */,
 				55E930711D27C63800300FF7 /* LaunchScreen.storyboard */,
@@ -84,6 +87,7 @@
 				55700A101D38B32D000B3DBC /* MEX-CPI-Data.txt */,
 				55700A111D38B32D000B3DBC /* UK-CPI-Data.txt */,
 				55E930741D27C63800300FF7 /* Info.plist */,
+				55E930661D27C63800300FF7 /* Products */,
 			);
 			path = "inflation-calc";
 			sourceTree = "<group>";
@@ -91,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		55E930641D27C63800300FF7 /* inflation-calc */ = {
+		55E930641D27C63800300FF7 /* Inflation Calc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 55E930771D27C63800300FF7 /* Build configuration list for PBXNativeTarget "inflation-calc" */;
+			buildConfigurationList = 55E930771D27C63800300FF7 /* Build configuration list for PBXNativeTarget "Inflation Calc" */;
 			buildPhases = (
 				55E930611D27C63800300FF7 /* Sources */,
 				55E930621D27C63800300FF7 /* Frameworks */,
@@ -103,9 +107,9 @@
 			);
 			dependencies = (
 			);
-			name = "inflation-calc";
+			name = "Inflation Calc";
 			productName = "inflation-calc";
-			productReference = 55E930651D27C63800300FF7 /* inflation-calc.app */;
+			productReference = 55E930651D27C63800300FF7 /* Inflation Calc.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,7 +141,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				55E930641D27C63800300FF7 /* inflation-calc */,
+				55E930641D27C63800300FF7 /* Inflation Calc */,
 			);
 		};
 /* End PBXProject section */
@@ -170,6 +174,7 @@
 				5502624D1D2D4C480099FB54 /* InfoViewController.swift in Sources */,
 				55E930691D27C63800300FF7 /* AppDelegate.swift in Sources */,
 				55389B841D2FD704004CCE5B /* MainViewController.swift in Sources */,
+				55700A191D3CBED2000B3DBC /* ForecastingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +317,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		55E930771D27C63800300FF7 /* Build configuration list for PBXNativeTarget "inflation-calc" */ = {
+		55E930771D27C63800300FF7 /* Build configuration list for PBXNativeTarget "Inflation Calc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				55E930781D27C63800300FF7 /* Debug */,

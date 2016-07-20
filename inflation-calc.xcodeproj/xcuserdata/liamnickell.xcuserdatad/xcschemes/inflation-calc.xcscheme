@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "55E930641D27C63800300FF7"
-               BuildableName = "inflation-calc.app"
-               BlueprintName = "inflation-calc"
+               BuildableName = "Inflation Calc.app"
+               BlueprintName = "Inflation Calc"
                ReferencedContainer = "container:inflation-calc.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55E930641D27C63800300FF7"
-            BuildableName = "inflation-calc.app"
-            BlueprintName = "inflation-calc"
+            BuildableName = "Inflation Calc.app"
+            BlueprintName = "Inflation Calc"
             ReferencedContainer = "container:inflation-calc.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55E930641D27C63800300FF7"
-            BuildableName = "inflation-calc.app"
-            BlueprintName = "inflation-calc"
+            BuildableName = "Inflation Calc.app"
+            BlueprintName = "Inflation Calc"
             ReferencedContainer = "container:inflation-calc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "55E930641D27C63800300FF7"
-            BuildableName = "inflation-calc.app"
-            BlueprintName = "inflation-calc"
+            BuildableName = "Inflation Calc.app"
+            BlueprintName = "Inflation Calc"
             ReferencedContainer = "container:inflation-calc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

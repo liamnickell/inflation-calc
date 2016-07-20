@@ -10,7 +10,7 @@
         <!--InfCalcViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="InfCalcViewController" id="BYZ-38-t0r" customClass="InfCalcViewController" customModule="inflation_calc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="InfCalcViewController" id="BYZ-38-t0r" customClass="InfCalcViewController" customModule="Inflation_Calc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -56,7 +56,7 @@
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input value here" textAlignment="natural" minimumFontSize="30" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nrJ-k9-KaD">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input value here" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nrJ-k9-KaD">
                                                                 <rect key="frame" x="140" y="0.0" width="420" height="50"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -213,10 +213,31 @@
             </objects>
             <point key="canvasLocation" x="1932" y="241"/>
         </scene>
+        <!--InfForecastingViewController-->
+        <scene sceneID="796-Wt-brb">
+            <objects>
+                <viewController title="InfForecastingViewController" id="EzJ-pf-8vd" customClass="ForecastingViewController" customModule="Inflation_Calc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zY3-qn-bsc"/>
+                        <viewControllerLayoutGuide type="bottom" id="THK-yL-SxL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qC8-hB-HuH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Inflation Forecasting" id="7K6-HT-CuA">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="XqP-4x-WmE"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GLs-ic-zqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1932" y="1022"/>
+        </scene>
         <!--InfoViewController-->
         <scene sceneID="CPU-lz-gcq">
             <objects>
-                <viewController title="InfoViewController" id="bVq-ZZ-THg" customClass="InfoViewController" customModule="inflation_calc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="InfoViewController" id="bVq-ZZ-THg" customClass="InfoViewController" customModule="Inflation_Calc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aMG-ot-d1x"/>
                         <viewControllerLayoutGuide type="bottom" id="28V-nZ-4B9"/>
@@ -239,7 +260,7 @@
         <!--MainViewController-->
         <scene sceneID="wfd-pR-2Bd">
             <objects>
-                <viewController id="wIw-aL-AD2" userLabel="MainViewController" customClass="MainViewController" customModule="inflation_calc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wIw-aL-AD2" userLabel="MainViewController" customClass="MainViewController" customModule="Inflation_Calc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cCB-3t-hNF"/>
                         <viewControllerLayoutGuide type="bottom" id="90F-lK-fV0"/>
@@ -380,7 +401,7 @@
                                             <segue destination="BYZ-38-t0r" kind="show" id="Vqg-sM-qb1"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLb-ue-gQN">
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLb-ue-gQN">
                                         <rect key="frame" x="0.0" y="419" width="560" height="60"/>
                                         <color key="backgroundColor" red="0.24576963651315786" green="0.78956940046841995" blue="0.97301863204210526" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -391,6 +412,9 @@
                                         <state key="normal" title="Forecasting">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="EzJ-pf-8vd" kind="show" id="FEG-2P-pbm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -456,6 +480,6 @@
         <image name="info-icon-edited" width="102" height="102"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ncz-3A-BLn"/>
+        <segue reference="nAc-qX-tFp"/>
     </inferredMetricsTieBreakers>
 </document>
