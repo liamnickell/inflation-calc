@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FDV-vq-cVh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FDV-vq-cVh">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -55,21 +55,40 @@
                                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="32"/>
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <variation key="default">
+                                                                    <mask key="constraints">
+                                                                        <exclude reference="ZBd-YD-siT"/>
+                                                                    </mask>
+                                                                </variation>
                                                             </label>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input value here" textAlignment="natural" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nrJ-k9-KaD">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input value here" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nrJ-k9-KaD">
                                                                 <rect key="frame" x="140" y="0.0" width="420" height="50"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="420" id="G6m-19-Fys"/>
                                                                     <constraint firstAttribute="height" constant="50" id="M9d-3P-oBd"/>
+                                                                    <constraint firstAttribute="height" constant="50" id="dnL-UL-xqC"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="30"/>
                                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" keyboardAppearance="alert"/>
+                                                                <variation key="default">
+                                                                    <mask key="constraints">
+                                                                        <exclude reference="M9d-3P-oBd"/>
+                                                                    </mask>
+                                                                </variation>
                                                             </textField>
                                                         </subviews>
                                                         <constraints>
+                                                            <constraint firstItem="nrJ-k9-KaD" firstAttribute="bottom" secondItem="pbc-Ib-Qdf" secondAttribute="bottom" id="SPV-Ez-t9e"/>
                                                             <constraint firstAttribute="height" constant="50" id="Yq4-U1-ZHa"/>
+                                                            <constraint firstItem="nrJ-k9-KaD" firstAttribute="top" secondItem="pbc-Ib-Qdf" secondAttribute="top" id="bTJ-7a-omV"/>
                                                         </constraints>
+                                                        <variation key="default">
+                                                            <mask key="constraints">
+                                                                <exclude reference="SPV-Ez-t9e"/>
+                                                                <exclude reference="bTJ-7a-omV"/>
+                                                            </mask>
+                                                        </variation>
                                                     </stackView>
                                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wwQ-zk-wU8">
                                                         <rect key="frame" x="115" y="50" width="330" height="156"/>
