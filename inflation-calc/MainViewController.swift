@@ -43,42 +43,43 @@ class MainViewController: UIViewController {
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		let btn: UIButton = sender as! UIButton
+		let tag = btn.tag
 		
-		if btn.tag != 6 {
+		if tag != 6 && tag != 7 && tag != 8 {
 			let destinationViewController: InfCalcViewController = segue.destinationViewController as! InfCalcViewController
 			
-			if btn.tag == 0 {
+			if tag == 0 {
 				destinationViewController.title = "USD Inflation"
 				destinationViewController.path = NSBundle.mainBundle().pathForResource("CPI-Data", ofType: "txt")
 				destinationViewController.maxYear = 1774
 				destinationViewController.currencySymbol = "$"
 				destinationViewController.reverseFileOrder = false
-			} else if btn.tag == 1 {
+			} else if tag == 1 {
 				destinationViewController.title = "Euro Inflation"
 				destinationViewController.path = NSBundle.mainBundle().pathForResource("EU-CPI-Data", ofType: "txt")
 				destinationViewController.maxYear = 1996
 				destinationViewController.currencySymbol = "€"
 				destinationViewController.reverseFileOrder = true
-			} else if btn.tag == 2 {
+			} else if tag == 2 {
 				destinationViewController.title = "GBP Inflation"
 				destinationViewController.path = NSBundle.mainBundle().pathForResource("UK-CPI-Data", ofType: "txt")
 				destinationViewController.maxYear = 1948
 				destinationViewController.currencySymbol = "£"
 				destinationViewController.reverseFileOrder = true
-			} else if btn.tag == 3 {
+			} else if tag == 3 {
 				destinationViewController.title = "CAD Inflation"
 				destinationViewController.path = NSBundle.mainBundle().pathForResource("CAD-CPI-Data", ofType: "txt")
 				destinationViewController.maxYear = 1948
 				destinationViewController.currencySymbol = "$"
 				destinationViewController.reverseFileOrder = true
-			} else if btn.tag == 4 {
+			} else if tag == 4 {
 				destinationViewController.title = "JPY Inflation"
 				destinationViewController.path = NSBundle.mainBundle().pathForResource("Japan-CPI-Data", ofType: "txt")
 				destinationViewController.maxYear = 1948
 				destinationViewController.currencySymbol = "¥"
 				destinationViewController.reverseFileOrder = true
 				destinationViewController.isYen = true
-			} else if btn.tag == 5 {
+			} else if tag == 5 {
 				destinationViewController.title = "MXN Inflation"
 				destinationViewController.path = NSBundle.mainBundle().pathForResource("MEX-CPI-Data", ofType: "txt")
 				destinationViewController.maxYear = 1948
