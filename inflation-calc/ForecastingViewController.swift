@@ -10,26 +10,21 @@ import UIKit
 
 class ForecastingViewController: UIViewController {
 
+	@IBOutlet weak var inputValueTextField: UITextField!
+	@IBOutlet weak var annualRateTextField: UITextField!
+	@IBOutlet weak var futureYearTextField: UITextField!
+	@IBOutlet weak var currencySymbolLbl: UILabel!
+	@IBOutlet weak var outputValueLbl: UILabel!
+	@IBOutlet weak var calculateBtn: UIButton!
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+		outputValueLbl.layer.cornerRadius = 6
+		calculateBtn.layer.cornerRadius = 6
+		
+		outputValueLbl.layer.borderWidth = 1
+		outputValueLbl.layer.borderColor = UIColor.lightGrayColor().CGColor
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -32,6 +32,10 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	var percentChange = 0.0
 	var storedTextFieldContent = ""
 	
+	var keyboardIsDark = false
+	var keyboardToolbarIsTranslucent = true
+	var doneBtnCalculates = false
+	
 	let unknownError = UIAlertController(title: "Unknown Error", message: "An unknown error has occured. Please retry or restart the app.", preferredStyle: UIAlertControllerStyle.Alert)
 	let invalidInput = UIAlertController(title: "Invalid Input", message: "Please input a valid number before attempting to calculate inflation.", preferredStyle: UIAlertControllerStyle.Alert)
 	
@@ -104,7 +108,6 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 		bottomPickerView.dataSource = self
 		
 		inputTextField.delegate = self
-		addDoneButtonOnKeyboard()
 		
 		unknownError.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
 		invalidInput.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
@@ -114,6 +117,14 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	
 	override func viewWillAppear(animated: Bool) {
 		currencySymbolLbl.text = currencySymbol
+		
+		if keyboardIsDark {
+			inputTextField.keyboardAppearance = UIKeyboardAppearance.Dark
+		} else {
+			inputTextField.keyboardAppearance = UIKeyboardAppearance.Default
+		}
+		
+		addDoneButtonOnKeyboard()
 	}
 	
 	override func viewWillDisappear(animated: Bool) {
@@ -146,12 +157,22 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	
 	func addDoneButtonOnKeyboard() {
 		let doneToolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
-		doneToolbar.barStyle = UIBarStyle.BlackOpaque
-		doneToolbar.translucent = true
+		
+		if keyboardIsDark {
+			doneToolbar.barStyle = UIBarStyle.Black
+		} else {
+			doneToolbar.barStyle = UIBarStyle.Default
+		}
+		
+		if keyboardToolbarIsTranslucent {
+			doneToolbar.translucent = true
+		} else {
+			doneToolbar.translucent = false
+		}
 		
 		let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-		let done = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: Selector("doneBtnPressed"))
-		let cancel = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelBtnPressed")
+		let done = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: #selector(InfCalcViewController.doneBtnPressed))
+		let cancel = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(InfCalcViewController.cancelBtnPressed))
 		
 		var items = [UIBarButtonItem]()
 		items.append(cancel)
@@ -168,6 +189,10 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	func doneBtnPressed() {
 		if let text = inputTextField.text {
 			storedTextFieldContent = text
+		}
+		
+		if doneBtnCalculates {
+			calculateInflation(UIButton)
 		}
 		
 		inputTextField.resignFirstResponder()

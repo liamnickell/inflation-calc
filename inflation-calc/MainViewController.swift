@@ -19,6 +19,8 @@ class MainViewController: UIViewController {
 	@IBOutlet weak var infCalcBtnMxn: UIButton!
 	@IBOutlet weak var infForecastCalcBtn: UIButton!
 	
+	let defaults = NSUserDefaults.standardUserDefaults()
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		
@@ -31,10 +33,16 @@ class MainViewController: UIViewController {
 		infCalcBtnMxn.layer.cornerRadius = 6
 		
 		appTitle.adjustsFontSizeToFitWidth = true
-    }
+	}
 	
 	override func viewWillAppear(animated: Bool) {
 		navigationController?.navigationBarHidden = true
+		
+		if defaults.objectForKey("darkKeyboard") != nil && defaults.objectForKey("translucentKeyboardToolbar") != nil && defaults.objectForKey("doneBtn") == nil {
+			defaults.setObject(false, forKey: "darkKeyboard")
+			defaults.setObject(true, forKey: "translucentKeyboardToolbar")
+			defaults.setObject(false, forKey: "doneBtn")
+		}
 	}
 	
 	override func viewWillDisappear(animated: Bool) {
@@ -46,57 +54,51 @@ class MainViewController: UIViewController {
 		let tag = btn.tag
 		
 		if tag != 6 && tag != 7 && tag != 8 {
-			let destinationViewController: InfCalcViewController = segue.destinationViewController as! InfCalcViewController
+			let destinationVC: InfCalcViewController = segue.destinationViewController as! InfCalcViewController
 			
 			if tag == 0 {
-				destinationViewController.title = "USD Inflation"
-				destinationViewController.path = NSBundle.mainBundle().pathForResource("CPI-Data", ofType: "txt")
-				destinationViewController.maxYear = 1774
-				destinationViewController.currencySymbol = "$"
-				destinationViewController.reverseFileOrder = false
+				destinationVC.title = "USD Inflation"
+				destinationVC.path = NSBundle.mainBundle().pathForResource("CPI-Data", ofType: "txt")
+				destinationVC.maxYear = 1774
+				destinationVC.currencySymbol = "$"
+				destinationVC.reverseFileOrder = false
 			} else if tag == 1 {
-				destinationViewController.title = "Euro Inflation"
-				destinationViewController.path = NSBundle.mainBundle().pathForResource("EU-CPI-Data", ofType: "txt")
-				destinationViewController.maxYear = 1996
-				destinationViewController.currencySymbol = "€"
-				destinationViewController.reverseFileOrder = true
+				destinationVC.title = "EUR Inflation"
+				destinationVC.path = NSBundle.mainBundle().pathForResource("EU-CPI-Data", ofType: "txt")
+				destinationVC.maxYear = 1996
+				destinationVC.currencySymbol = "€"
+				destinationVC.reverseFileOrder = true
 			} else if tag == 2 {
-				destinationViewController.title = "GBP Inflation"
-				destinationViewController.path = NSBundle.mainBundle().pathForResource("UK-CPI-Data", ofType: "txt")
-				destinationViewController.maxYear = 1948
-				destinationViewController.currencySymbol = "£"
-				destinationViewController.reverseFileOrder = true
+				destinationVC.title = "GBP Inflation"
+				destinationVC.path = NSBundle.mainBundle().pathForResource("UK-CPI-Data", ofType: "txt")
+				destinationVC.maxYear = 1948
+				destinationVC.currencySymbol = "£"
+				destinationVC.reverseFileOrder = true
 			} else if tag == 3 {
-				destinationViewController.title = "CAD Inflation"
-				destinationViewController.path = NSBundle.mainBundle().pathForResource("CAD-CPI-Data", ofType: "txt")
-				destinationViewController.maxYear = 1948
-				destinationViewController.currencySymbol = "$"
-				destinationViewController.reverseFileOrder = true
+				destinationVC.title = "CAD Inflation"
+				destinationVC.path = NSBundle.mainBundle().pathForResource("CAD-CPI-Data", ofType: "txt")
+				destinationVC.maxYear = 1948
+				destinationVC.currencySymbol = "$"
+				destinationVC.reverseFileOrder = true
 			} else if tag == 4 {
-				destinationViewController.title = "JPY Inflation"
-				destinationViewController.path = NSBundle.mainBundle().pathForResource("Japan-CPI-Data", ofType: "txt")
-				destinationViewController.maxYear = 1948
-				destinationViewController.currencySymbol = "¥"
-				destinationViewController.reverseFileOrder = true
-				destinationViewController.isYen = true
+				destinationVC.title = "JPY Inflation"
+				destinationVC.path = NSBundle.mainBundle().pathForResource("Japan-CPI-Data", ofType: "txt")
+				destinationVC.maxYear = 1948
+				destinationVC.currencySymbol = "¥"
+				destinationVC.reverseFileOrder = true
+				destinationVC.isYen = true
 			} else if tag == 5 {
-				destinationViewController.title = "MXN Inflation"
-				destinationViewController.path = NSBundle.mainBundle().pathForResource("MEX-CPI-Data", ofType: "txt")
-				destinationViewController.maxYear = 1948
-				destinationViewController.currencySymbol = "$"
-				destinationViewController.reverseFileOrder = true
+				destinationVC.title = "MXN Inflation"
+				destinationVC.path = NSBundle.mainBundle().pathForResource("MEX-CPI-Data", ofType: "txt")
+				destinationVC.maxYear = 1948
+				destinationVC.currencySymbol = "$"
+				destinationVC.reverseFileOrder = true
 			}
+			
+			destinationVC.keyboardIsDark = defaults.objectForKey("darkKeyboard") as! Bool
+			destinationVC.keyboardToolbarIsTranslucent = defaults.objectForKey("translucentKeyboardToolbar") as! Bool
+			destinationVC.doneBtnCalculates = defaults.objectForKey("doneBtn") as! Bool
 		}
 	}
-	
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

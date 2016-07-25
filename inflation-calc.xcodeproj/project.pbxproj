@@ -16,6 +16,8 @@
 		55700A161D38B32D000B3DBC /* MEX-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55700A101D38B32D000B3DBC /* MEX-CPI-Data.txt */; };
 		55700A171D38B32D000B3DBC /* UK-CPI-Data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55700A111D38B32D000B3DBC /* UK-CPI-Data.txt */; };
 		55700A191D3CBED2000B3DBC /* ForecastingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55700A181D3CBED2000B3DBC /* ForecastingViewController.swift */; };
+		559D43DF1D41E6990038BB1D /* MainInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559D43DE1D41E6990038BB1D /* MainInfoViewController.swift */; };
+		559D43E31D4495200038BB1D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559D43E21D4495200038BB1D /* SettingsTableViewController.swift */; };
 		55E930691D27C63800300FF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E930681D27C63800300FF7 /* AppDelegate.swift */; };
 		55E9306B1D27C63800300FF7 /* InfCalcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9306A1D27C63800300FF7 /* InfCalcViewController.swift */; };
 		55E9306E1D27C63800300FF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55E9306C1D27C63800300FF7 /* Main.storyboard */; };
@@ -33,6 +35,8 @@
 		55700A101D38B32D000B3DBC /* MEX-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "MEX-CPI-Data.txt"; sourceTree = "<group>"; };
 		55700A111D38B32D000B3DBC /* UK-CPI-Data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UK-CPI-Data.txt"; sourceTree = "<group>"; };
 		55700A181D3CBED2000B3DBC /* ForecastingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastingViewController.swift; sourceTree = "<group>"; };
+		559D43DE1D41E6990038BB1D /* MainInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInfoViewController.swift; sourceTree = "<group>"; };
+		559D43E21D4495200038BB1D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		55E930651D27C63800300FF7 /* Inflation Calc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inflation Calc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55E930681D27C63800300FF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55E9306A1D27C63800300FF7 /* InfCalcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfCalcViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 			children = (
 				55E930681D27C63800300FF7 /* AppDelegate.swift */,
 				55389B831D2FD704004CCE5B /* MainViewController.swift */,
+				559D43DE1D41E6990038BB1D /* MainInfoViewController.swift */,
+				559D43E21D4495200038BB1D /* SettingsTableViewController.swift */,
 				55E9306A1D27C63800300FF7 /* InfCalcViewController.swift */,
 				55700A181D3CBED2000B3DBC /* ForecastingViewController.swift */,
 				5502624C1D2D4C480099FB54 /* InfoViewController.swift */,
@@ -173,8 +179,10 @@
 				55E9306B1D27C63800300FF7 /* InfCalcViewController.swift in Sources */,
 				5502624D1D2D4C480099FB54 /* InfoViewController.swift in Sources */,
 				55E930691D27C63800300FF7 /* AppDelegate.swift in Sources */,
+				559D43DF1D41E6990038BB1D /* MainInfoViewController.swift in Sources */,
 				55389B841D2FD704004CCE5B /* MainViewController.swift in Sources */,
 				55700A191D3CBED2000B3DBC /* ForecastingViewController.swift in Sources */,
+				559D43E31D4495200038BB1D /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
