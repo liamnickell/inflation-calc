@@ -38,10 +38,11 @@ class MainViewController: UIViewController {
 	override func viewWillAppear(animated: Bool) {
 		navigationController?.navigationBarHidden = true
 		
-		if defaults.objectForKey("darkKeyboard") != nil && defaults.objectForKey("translucentKeyboardToolbar") != nil && defaults.objectForKey("doneBtn") == nil {
+		if defaults.objectForKey("darkKeyboard") == nil || defaults.objectForKey("translucentKeyboardToolbar") == nil || defaults.objectForKey("doneBtn") == nil || defaults.objectForKey("doneBtnForecasts") == nil {
 			defaults.setObject(false, forKey: "darkKeyboard")
 			defaults.setObject(true, forKey: "translucentKeyboardToolbar")
 			defaults.setObject(false, forKey: "doneBtn")
+			defaults.setObject(false, forKey: "doneBtnForecasts")
 		}
 	}
 	
@@ -103,6 +104,7 @@ class MainViewController: UIViewController {
 			
 			destinationVC.keyboardIsDark = defaults.objectForKey("darkKeyboard") as! Bool
 			destinationVC.keyboardToolbarIsTranslucent = defaults.objectForKey("translucentKeyboardToolbar") as! Bool
+			destinationVC.doneBtnForecasts = defaults.objectForKey("doneBtnForecasts") as! Bool
 		}
 	}
 

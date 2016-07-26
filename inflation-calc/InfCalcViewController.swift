@@ -39,7 +39,7 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 	let unknownError = UIAlertController(title: "Unknown Error", message: "An unknown error has occured. Please retry or restart the app.", preferredStyle: UIAlertControllerStyle.Alert)
 	let invalidInput = UIAlertController(title: "Invalid Input", message: "Please input a valid number before attempting to calculate inflation.", preferredStyle: UIAlertControllerStyle.Alert)
 	
-	@IBAction func calculateInflation(sender: AnyObject) {
+	@IBAction func calculateInflation() {
 		findCpiData()
 		
 		if let textFieldText = inputTextField.text, textFieldAsDouble = Double(textFieldText) {
@@ -192,7 +192,7 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 		}
 		
 		if doneBtnCalculates {
-			calculateInflation(UIButton)
+			calculateInflation()
 		}
 		
 		self.view.endEditing(true)

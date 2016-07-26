@@ -150,7 +150,7 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="calculateInflation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4n0-xx-B90"/>
+                                            <action selector="calculateInflation" destination="BYZ-38-t0r" eventType="touchUpInside" id="a6J-PG-IEe"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -326,7 +326,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="'Done' Button Calculates Inflation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGf-ja-qIO">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pressing 'Done' Button Calculates Inflation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGf-ja-qIO">
                                                     <rect key="frame" x="14" y="6" width="499" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="375" id="DB2-fD-avT"/>
@@ -350,10 +350,69 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="QOv-Rt-iPi" secondAttribute="trailing" id="1UB-sd-oAP"/>
                                                 <constraint firstItem="xGf-ja-qIO" firstAttribute="leading" secondItem="6cg-m9-P0u" secondAttribute="leadingMargin" constant="8" id="7JK-PI-RWO"/>
-                                                <constraint firstItem="QOv-Rt-iPi" firstAttribute="leading" secondItem="xGf-ja-qIO" secondAttribute="trailing" constant="15" id="cDh-Hd-ntm"/>
+                                                <constraint firstItem="QOv-Rt-iPi" firstAttribute="leading" secondItem="xGf-ja-qIO" secondAttribute="trailing" constant="20" id="cDh-Hd-ntm"/>
                                                 <constraint firstItem="QOv-Rt-iPi" firstAttribute="centerY" secondItem="6cg-m9-P0u" secondAttribute="centerY" id="hJP-8y-vdB"/>
                                                 <constraint firstItem="xGf-ja-qIO" firstAttribute="centerY" secondItem="6cg-m9-P0u" secondAttribute="centerY" id="o8P-ru-E0g"/>
                                             </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1mE-fH-0Ef">
+                                        <rect key="frame" x="0.0" y="295.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1mE-fH-0Ef" id="gyq-gs-63m">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pressing 'Done' Button Forecasts Inflation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gV7-YZ-6tB">
+                                                    <rect key="frame" x="13" y="1" width="497" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="375" id="r5C-MV-vBh"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="r5C-MV-vBh"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tvy-dw-87n">
+                                                    <rect key="frame" x="543" y="1" width="51" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="49" id="RoO-au-1nK"/>
+                                                        <constraint firstAttribute="height" constant="31" id="Sg8-fH-UUX"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="Sg8-fH-UUX"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="doneBtnForecasts:" destination="t2i-uS-8yH" eventType="valueChanged" id="rHB-Q3-JjO"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tvy-dw-87n" firstAttribute="leading" secondItem="gV7-YZ-6tB" secondAttribute="trailing" constant="15" id="87j-84-p6G"/>
+                                                <constraint firstItem="gV7-YZ-6tB" firstAttribute="leading" secondItem="gyq-gs-63m" secondAttribute="leadingMargin" constant="8" id="9v8-hM-L5c"/>
+                                                <constraint firstItem="gV7-YZ-6tB" firstAttribute="trailing" secondItem="tvy-dw-87n" secondAttribute="leading" constant="30" id="A7u-nq-FJ5"/>
+                                                <constraint firstItem="tvy-dw-87n" firstAttribute="leading" secondItem="gV7-YZ-6tB" secondAttribute="trailing" constant="30" id="Ol0-da-iqL"/>
+                                                <constraint firstItem="tvy-dw-87n" firstAttribute="leading" secondItem="gV7-YZ-6tB" secondAttribute="trailing" priority="250" constant="30" id="RP2-jC-RcP"/>
+                                                <constraint firstItem="gV7-YZ-6tB" firstAttribute="centerY" secondItem="gyq-gs-63m" secondAttribute="centerY" id="g8a-5N-Mbf"/>
+                                                <constraint firstItem="gV7-YZ-6tB" firstAttribute="trailing" secondItem="tvy-dw-87n" secondAttribute="leading" constant="100" id="nhw-Hm-hxY"/>
+                                                <constraint firstItem="tvy-dw-87n" firstAttribute="centerY" secondItem="gyq-gs-63m" secondAttribute="centerY" id="tMa-J1-wGw"/>
+                                                <constraint firstItem="tvy-dw-87n" firstAttribute="leading" secondItem="gV7-YZ-6tB" secondAttribute="trailing" constant="20" id="x7i-pD-M8J"/>
+                                                <constraint firstItem="tvy-dw-87n" firstAttribute="trailing" secondItem="gyq-gs-63m" secondAttribute="trailingMargin" id="xY6-Q6-SZH"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="A7u-nq-FJ5"/>
+                                                    <exclude reference="nhw-Hm-hxY"/>
+                                                    <exclude reference="87j-84-p6G"/>
+                                                    <exclude reference="Ol0-da-iqL"/>
+                                                    <exclude reference="RP2-jC-RcP"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -372,6 +431,8 @@
                         <outlet property="darkKeyboardLbl" destination="ygj-z4-krw" id="cE1-C6-IUO"/>
                         <outlet property="doneBtnCalculates" destination="QOv-Rt-iPi" id="bNs-yh-DI6"/>
                         <outlet property="doneBtnCalculatesLbl" destination="xGf-ja-qIO" id="xiI-QN-usE"/>
+                        <outlet property="doneBtnForecasts" destination="tvy-dw-87n" id="az1-5o-MRY"/>
+                        <outlet property="doneBtnForecastsLbl" destination="gV7-YZ-6tB" id="d9Q-DY-zwq"/>
                         <outlet property="translucentKeyboardToolbar" destination="X9r-X9-cKf" id="hh8-2Z-dcj"/>
                         <outlet property="translucentKeyboardToolbarLbl" destination="tgp-X0-uLI" id="UyE-qg-AWK"/>
                     </connections>

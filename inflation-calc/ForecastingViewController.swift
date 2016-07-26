@@ -29,6 +29,7 @@ class ForecastingViewController: UIViewController {
 	
 	var keyboardIsDark = false
 	var keyboardToolbarIsTranslucent = true
+	var doneBtnForecasts = false
 	
 	var storedTextFieldContentValue = ""
 	var storedTextFieldContentRate = ""
@@ -247,6 +248,10 @@ class ForecastingViewController: UIViewController {
 			storedTextFieldContentValue = text
 		}
 		
+		if doneBtnForecasts {
+			forecastInflation()
+		}
+		
 		self.view.endEditing(true)
 	}
 	
@@ -260,6 +265,10 @@ class ForecastingViewController: UIViewController {
 			storedTextFieldContentRate = text
 		}
 		
+		if doneBtnForecasts {
+			forecastInflation()
+		}
+		
 		self.view.endEditing(true)
 	}
 	
@@ -271,6 +280,10 @@ class ForecastingViewController: UIViewController {
 	func doneBtnPressedFutureYearTextField() {
 		if let text = futureYearTextField.text {
 			storedTextFieldContentFutureYear = text
+		}
+		
+		if doneBtnForecasts {
+			forecastInflation()
 		}
 		
 		self.view.endEditing(true)
