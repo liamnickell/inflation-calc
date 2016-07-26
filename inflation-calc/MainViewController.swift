@@ -98,6 +98,11 @@ class MainViewController: UIViewController {
 			destinationVC.keyboardIsDark = defaults.objectForKey("darkKeyboard") as! Bool
 			destinationVC.keyboardToolbarIsTranslucent = defaults.objectForKey("translucentKeyboardToolbar") as! Bool
 			destinationVC.doneBtnCalculates = defaults.objectForKey("doneBtn") as! Bool
+		} else if tag == 6 {
+			let destinationVC = segue.destinationViewController as! ForecastingViewController
+			
+			destinationVC.keyboardIsDark = defaults.objectForKey("darkKeyboard") as! Bool
+			destinationVC.keyboardToolbarIsTranslucent = defaults.objectForKey("translucentKeyboardToolbar") as! Bool
 		}
 	}
 

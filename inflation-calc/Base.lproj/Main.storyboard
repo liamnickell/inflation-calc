@@ -46,9 +46,10 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="cEm-eO-p6G">
                                                         <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbc-Ib-Qdf">
-                                                                <rect key="frame" x="0.0" y="0.0" width="305" height="50"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="790" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbc-Ib-Qdf">
+                                                                <rect key="frame" x="0.0" y="0.0" width="319" height="50"/>
                                                                 <constraints>
+                                                                    <constraint firstAttribute="width" constant="20" id="4TU-1S-Amy"/>
                                                                     <constraint firstAttribute="width" constant="15" id="J57-T3-l4t"/>
                                                                     <constraint firstAttribute="height" constant="50" id="ZBd-YD-siT"/>
                                                                 </constraints>
@@ -57,13 +58,14 @@
                                                                 <nil key="highlightedColor"/>
                                                                 <variation key="default">
                                                                     <mask key="constraints">
+                                                                        <exclude reference="4TU-1S-Amy"/>
                                                                         <exclude reference="J57-T3-l4t"/>
                                                                         <exclude reference="ZBd-YD-siT"/>
                                                                     </mask>
                                                                 </variation>
                                                             </label>
                                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input value here" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nrJ-k9-KaD">
-                                                                <rect key="frame" x="311" y="0.0" width="249" height="50"/>
+                                                                <rect key="frame" x="325" y="0.0" width="235" height="50"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="420" id="G6m-19-Fys"/>
@@ -438,6 +440,9 @@
                                     <constraint firstAttribute="width" constant="28" id="efq-Zk-l9U"/>
                                 </constraints>
                                 <state key="normal" image="info-icon-edited"/>
+                                <connections>
+                                    <segue destination="bVq-ZZ-THg" kind="show" id="9fA-QF-k8Q"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="G5K-ff-Wnf">
                                 <rect key="frame" x="20" y="72" width="560" height="478"/>
@@ -445,8 +450,8 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WIQ-bq-7Fi">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="325"/>
                                         <subviews>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gc6-ZX-Zdp">
-                                                <rect key="frame" x="0.0" y="0.0" width="560" height="1"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="770" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gc6-ZX-Zdp">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="15"/>
                                                 <segments>
                                                     <segment title="USD"/>
                                                     <segment title="EUR"/>
@@ -455,12 +460,15 @@
                                                     <segment title="JPY"/>
                                                     <segment title="MXN"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="changeCurrency" destination="EzJ-pf-8vd" eventType="valueChanged" id="HbP-K5-pkH"/>
+                                                </connections>
                                             </segmentedControl>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="67" translatesAutoresizingMaskIntoConstraints="NO" id="dH2-yV-CNZ">
-                                                <rect key="frame" x="0.0" y="20" width="560" height="305"/>
+                                                <rect key="frame" x="0.0" y="34" width="560" height="291"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="zU7-1V-Rr6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="560" height="188"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="zU7-1V-Rr6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="560" height="174"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="QTQ-2F-OBY">
                                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
@@ -484,12 +492,18 @@
                                                                     <constraint firstItem="K3b-9H-gmp" firstAttribute="bottom" secondItem="2gM-Ss-0od" secondAttribute="bottom" id="Ga9-xF-e82"/>
                                                                     <constraint firstItem="K3b-9H-gmp" firstAttribute="top" secondItem="2gM-Ss-0od" secondAttribute="top" id="eBl-Pp-4Or"/>
                                                                 </constraints>
+                                                                <variation key="default">
+                                                                    <mask key="constraints">
+                                                                        <exclude reference="Ga9-xF-e82"/>
+                                                                        <exclude reference="eBl-Pp-4Or"/>
+                                                                    </mask>
+                                                                </variation>
                                                             </stackView>
                                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Gvh-lW-bAN">
-                                                                <rect key="frame" x="0.0" y="87" width="560" height="14"/>
+                                                                <rect key="frame" x="0.0" y="87" width="560" height="0.0"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Annual rate" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mGL-te-5qx">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="522" height="14"/>
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Annual rate" textAlignment="right" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mGL-te-5qx">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="522" height="0.0"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="oQV-PJ-ZCy"/>
                                                                         </constraints>
@@ -497,7 +511,7 @@
                                                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
                                                                     </textField>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="800" misplaced="YES" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQB-Ct-azz">
-                                                                        <rect key="frame" x="528" y="0.0" width="32" height="14"/>
+                                                                        <rect key="frame" x="528" y="0.0" width="32" height="0.0"/>
                                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="32"/>
                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -508,8 +522,8 @@
                                                                     <constraint firstItem="hQB-Ct-azz" firstAttribute="bottom" secondItem="mGL-te-5qx" secondAttribute="bottom" id="cVe-hG-lcc"/>
                                                                 </constraints>
                                                             </stackView>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Future year" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gH6-9C-nY5">
-                                                                <rect key="frame" x="0.0" y="138" width="560" height="50"/>
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Future year" textAlignment="center" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="gH6-9C-nY5">
+                                                                <rect key="frame" x="0.0" y="124" width="560" height="50"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="YsM-kf-JVN"/>
                                                                 </constraints>
@@ -525,14 +539,14 @@
                                                             <constraint firstItem="gH6-9C-nY5" firstAttribute="leading" secondItem="zU7-1V-Rr6" secondAttribute="leading" id="VTF-6O-csA"/>
                                                             <constraint firstAttribute="trailing" secondItem="gH6-9C-nY5" secondAttribute="trailing" id="Vta-V6-KXg"/>
                                                             <constraint firstAttribute="trailing" secondItem="gH6-9C-nY5" secondAttribute="trailing" constant="40" id="Wvt-0S-umH"/>
-                                                            <constraint firstItem="gH6-9C-nY5" firstAttribute="leading" secondItem="zU7-1V-Rr6" secondAttribute="leading" constant="85" id="Yif-Uz-pwa"/>
+                                                            <constraint firstItem="gH6-9C-nY5" firstAttribute="leading" secondItem="zU7-1V-Rr6" secondAttribute="leading" constant="95" id="Yif-Uz-pwa"/>
                                                             <constraint firstItem="Gvh-lW-bAN" firstAttribute="leading" secondItem="zU7-1V-Rr6" secondAttribute="leading" id="a3z-d1-1TO"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Gvh-lW-bAN" secondAttribute="trailing" constant="85" id="fK1-Cv-sww"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Gvh-lW-bAN" secondAttribute="trailing" constant="105" id="fK1-Cv-sww"/>
                                                             <constraint firstAttribute="trailing" secondItem="QTQ-2F-OBY" secondAttribute="trailing" id="fmE-0a-u2z"/>
-                                                            <constraint firstAttribute="trailing" secondItem="gH6-9C-nY5" secondAttribute="trailing" constant="85" id="mPt-hV-kcW"/>
+                                                            <constraint firstAttribute="trailing" secondItem="gH6-9C-nY5" secondAttribute="trailing" constant="95" id="mPt-hV-kcW"/>
                                                             <constraint firstItem="QTQ-2F-OBY" firstAttribute="leading" secondItem="zU7-1V-Rr6" secondAttribute="leading" id="s2P-yM-83M"/>
                                                             <constraint firstItem="gH6-9C-nY5" firstAttribute="trailing" secondItem="Gvh-lW-bAN" secondAttribute="trailing" id="t1e-KQ-AWy"/>
-                                                            <constraint firstItem="Gvh-lW-bAN" firstAttribute="leading" secondItem="zU7-1V-Rr6" secondAttribute="leading" constant="85" id="y6n-ch-g4u"/>
+                                                            <constraint firstItem="Gvh-lW-bAN" firstAttribute="leading" secondItem="zU7-1V-Rr6" secondAttribute="leading" constant="105" id="y6n-ch-g4u"/>
                                                             <constraint firstItem="gH6-9C-nY5" firstAttribute="leading" secondItem="Gvh-lW-bAN" secondAttribute="leading" id="zPG-Q0-K3x"/>
                                                         </constraints>
                                                         <variation key="default">
@@ -550,8 +564,8 @@
                                                             </mask>
                                                         </variation>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 123456789.01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1Q-et-4dc">
-                                                        <rect key="frame" x="0.0" y="255" width="560" height="50"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1Q-et-4dc">
+                                                        <rect key="frame" x="0.0" y="241" width="560" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="BOz-rx-riw"/>
                                                         </constraints>
@@ -586,6 +600,9 @@
                                         <state key="normal" title="Calculate">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forecastInflation" destination="EzJ-pf-8vd" eventType="touchUpInside" id="aoG-sp-DKT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -618,6 +635,7 @@
                     <connections>
                         <outlet property="annualRateTextField" destination="mGL-te-5qx" id="Tw1-aE-ks2"/>
                         <outlet property="calculateBtn" destination="rEp-xB-S1E" id="ze8-iu-gHa"/>
+                        <outlet property="currencyOptions" destination="Gc6-ZX-Zdp" id="Kdn-GQ-U8W"/>
                         <outlet property="currencySymbolLbl" destination="2gM-Ss-0od" id="1bD-O7-Psu"/>
                         <outlet property="futureYearTextField" destination="gH6-9C-nY5" id="9OJ-Sp-GV1"/>
                         <outlet property="inputValueTextField" destination="K3b-9H-gmp" id="M6d-gI-8T1"/>
@@ -626,7 +644,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLs-ic-zqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1932" y="-430"/>
+            <point key="canvasLocation" x="1932" y="-536"/>
         </scene>
         <!--InfoViewController-->
         <scene sceneID="CPU-lz-gcq">
@@ -951,5 +969,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nAc-qX-tFp"/>
+        <segue reference="9fA-QF-k8Q"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -124,7 +124,7 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 			inputTextField.keyboardAppearance = UIKeyboardAppearance.Default
 		}
 		
-		addDoneButtonOnKeyboard()
+		addKeyboardToolbar()
 	}
 	
 	override func viewWillDisappear(animated: Bool) {
@@ -155,19 +155,19 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 		}
 	}
 	
-	func addDoneButtonOnKeyboard() {
-		let doneToolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
+	func addKeyboardToolbar() {
+		let toolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
 		
 		if keyboardIsDark {
-			doneToolbar.barStyle = UIBarStyle.Black
+			toolbar.barStyle = UIBarStyle.Black
 		} else {
-			doneToolbar.barStyle = UIBarStyle.Default
+			toolbar.barStyle = UIBarStyle.Default
 		}
 		
 		if keyboardToolbarIsTranslucent {
-			doneToolbar.translucent = true
+			toolbar.translucent = true
 		} else {
-			doneToolbar.translucent = false
+			toolbar.translucent = false
 		}
 		
 		let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
@@ -179,11 +179,11 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 		items.append(flexSpace)
 		items.append(done)
 		
-		doneToolbar.items = items
-		doneToolbar.userInteractionEnabled = true
-		doneToolbar.sizeToFit()
+		toolbar.items = items
+		toolbar.userInteractionEnabled = true
+		toolbar.sizeToFit()
 		
-		inputTextField.inputAccessoryView = doneToolbar
+		inputTextField.inputAccessoryView = toolbar
 	}
 	
 	func doneBtnPressed() {
@@ -195,12 +195,12 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
 			calculateInflation(UIButton)
 		}
 		
-		inputTextField.resignFirstResponder()
+		self.view.endEditing(true)
 	}
 	
 	func cancelBtnPressed() {
 		inputTextField.text = storedTextFieldContent
-		inputTextField.resignFirstResponder()
+		self.view.endEditing(true)
 	}
 	
 	func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
