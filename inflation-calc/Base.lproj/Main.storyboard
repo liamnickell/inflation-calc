@@ -52,7 +52,7 @@
                                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input value here" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nrJ-k9-KaD">
+                                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input value here" textAlignment="natural" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nrJ-k9-KaD">
                                                                 <rect key="frame" x="41" y="0.0" width="520" height="50"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
@@ -326,7 +326,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pressing 'Done' Button Calculates Inflation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGf-ja-qIO">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pressing 'Done' Button Calculates Inflation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="xGf-ja-qIO">
                                                     <rect key="frame" x="14" y="6" width="499" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="375" id="DB2-fD-avT"/>
@@ -363,7 +363,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pressing 'Done' Button Forecasts Inflation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gV7-YZ-6tB">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pressing 'Done' Button Forecasts Inflation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="gV7-YZ-6tB">
                                                     <rect key="frame" x="13" y="1" width="497" height="31"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="375" id="r5C-MV-vBh"/>
@@ -482,7 +482,7 @@
                                 </constraints>
                                 <state key="normal" image="info-icon-edited"/>
                                 <connections>
-                                    <segue destination="bVq-ZZ-THg" kind="show" id="9fA-QF-k8Q"/>
+                                    <segue destination="Ao0-77-Ybd" kind="show" id="Ikj-zH-Nht"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="G5K-ff-Wnf">
@@ -543,7 +543,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Gvh-lW-bAN">
                                                                 <rect key="frame" x="0.0" y="37" width="560" height="50"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Annual rate" textAlignment="right" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mGL-te-5qx">
+                                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Annual" textAlignment="right" minimumFontSize="12" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="mGL-te-5qx">
                                                                         <rect key="frame" x="0.0" y="0.0" width="524" height="50"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="50" id="oQV-PJ-ZCy"/>
@@ -686,6 +686,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLs-ic-zqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1932" y="-536"/>
+        </scene>
+        <!--Info-->
+        <scene sceneID="BeV-1T-LNn">
+            <objects>
+                <viewController id="Ao0-77-Ybd" customClass="ForecastingInfoViewController" customModule="Inflation_Calc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dwx-kJ-qvP"/>
+                        <viewControllerLayoutGuide type="bottom" id="wVU-RN-U3u"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KLm-Hi-QtC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Info" id="YJj-HP-Efd">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="lkz-ki-H23"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SsL-9b-ysv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2646" y="-536"/>
         </scene>
         <!--InfoViewController-->
         <scene sceneID="CPU-lz-gcq">
@@ -1010,6 +1031,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nAc-qX-tFp"/>
-        <segue reference="3jz-4U-dpe"/>
     </inferredMetricsTieBreakers>
 </document>
