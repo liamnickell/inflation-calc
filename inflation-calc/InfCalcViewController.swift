@@ -222,4 +222,5 @@ class InfCalcViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             bottomYear = years[row]
         }
     }
+
 }
