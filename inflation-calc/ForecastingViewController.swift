@@ -23,7 +23,7 @@ class ForecastingViewController: UIViewController {
 	var futureYear = 0
 	var result = 0.0
 	
-	let numberFormatter = NSNumberFormatter()
+	let numberFormatter = NumberFormatter()
 	var currencySymbol = "$"
 	var isYen = false
 	
@@ -35,9 +35,9 @@ class ForecastingViewController: UIViewController {
 	var storedTextFieldContentRate = ""
 	var storedTextFieldContentFutureYear = ""
 	
-	let invalidInput = UIAlertController(title: "Invalid Input", message: "Please type a valid input into all text fields before attempting to forecast inflation.", preferredStyle: UIAlertControllerStyle.Alert)
-	let invalidYearInput = UIAlertController(title: "Invalid Input", message: "Please input a year that is greater than the current year in order to forecast inflation.", preferredStyle: UIAlertControllerStyle.Alert)
-	let unknownError = UIAlertController(title: "Unknown Error", message: "An unknown error has occured. Please retry or restart the app.", preferredStyle: UIAlertControllerStyle.Alert)
+	let invalidInput = UIAlertController(title: "Invalid Input", message: "Please type a valid input into all text fields before attempting to forecast inflation.", preferredStyle: UIAlertControllerStyle.alert)
+	let invalidYearInput = UIAlertController(title: "Invalid Input", message: "Please input a year that is greater than the current year in order to forecast inflation.", preferredStyle: UIAlertControllerStyle.alert)
+	let unknownError = UIAlertController(title: "Unknown Error", message: "An unknown error has occured. Please retry or restart the app.", preferredStyle: UIAlertControllerStyle.alert)
 	
 	@IBAction func changeCurrency() {
 		switch currencyOptions.selectedSegmentIndex {
@@ -50,7 +50,7 @@ class ForecastingViewController: UIViewController {
 				numberFormatter.minimumFractionDigits = 2
 				numberFormatter.maximumFractionDigits = 2
 				
-				outputValueLbl.text = numberFormatter.stringFromNumber(result)
+                outputValueLbl.text = numberFormatter.string(from: NSNumber(value: result))
 				print(result)
 			}
 		case 1:
@@ -62,7 +62,7 @@ class ForecastingViewController: UIViewController {
 				numberFormatter.minimumFractionDigits = 2
 				numberFormatter.maximumFractionDigits = 2
 				
-				outputValueLbl.text = numberFormatter.stringFromNumber(result)
+                outputValueLbl.text = numberFormatter.string(from: NSNumber(value: result))
 			}
 		case 2:
 			currencySymbol = "£"
@@ -73,7 +73,7 @@ class ForecastingViewController: UIViewController {
 				numberFormatter.minimumFractionDigits = 2
 				numberFormatter.maximumFractionDigits = 2
 				
-				outputValueLbl.text = numberFormatter.stringFromNumber(result)
+                outputValueLbl.text = numberFormatter.string(from: NSNumber(value: result))
 			}
 		case 3:
 			currencySymbol = "$"
@@ -84,7 +84,7 @@ class ForecastingViewController: UIViewController {
 				numberFormatter.minimumFractionDigits = 2
 				numberFormatter.maximumFractionDigits = 2
 				
-				outputValueLbl.text = numberFormatter.stringFromNumber(result)
+                outputValueLbl.text = numberFormatter.string(from: NSNumber(value: result))
 			}
 		case 4:
 			currencySymbol = "¥"
@@ -95,7 +95,7 @@ class ForecastingViewController: UIViewController {
 				numberFormatter.minimumFractionDigits = 0
 				numberFormatter.maximumFractionDigits = 0
 				
-				outputValueLbl.text = numberFormatter.stringFromNumber(result)
+                outputValueLbl.text = numberFormatter.string(from: NSNumber(value: result))
 			}
 		case 5:
 			currencySymbol = "$"
@@ -106,10 +106,10 @@ class ForecastingViewController: UIViewController {
 				numberFormatter.minimumFractionDigits = 2
 				numberFormatter.maximumFractionDigits = 2
 				
-				outputValueLbl.text = numberFormatter.stringFromNumber(result)
+                outputValueLbl.text = numberFormatter.string(from: NSNumber(value: result))
 			}
 		default:
-			self.presentViewController(unknownError, animated: true, completion: nil)
+			self.present(unknownError, animated: true, completion: nil)
 		}
 	}
 	
@@ -119,14 +119,14 @@ class ForecastingViewController: UIViewController {
 		futureYear = 0
 		result = 0.0
 		
-		if let valueText = inputValueTextField.text, valueTextAsDouble = Double(valueText), rateText = annualRateTextField.text, rateTextAsDouble = Double(rateText), yearText = futureYearTextField.text, yearTextAsInt = Int(yearText) {
+		if let valueText = inputValueTextField.text, let valueTextAsDouble = Double(valueText), let rateText = annualRateTextField.text, let rateTextAsDouble = Double(rateText), let yearText = futureYearTextField.text, let yearTextAsInt = Int(yearText) {
 			value = valueTextAsDouble
 			rate = rateTextAsDouble / 100
 			futureYear = yearTextAsInt
 			
 			makeCalculation()
 		} else {
-			self.presentViewController(invalidInput, animated: true, completion: nil)
+			self.present(invalidInput, animated: true, completion: nil)
 		}
 	}
 	
@@ -139,22 +139,22 @@ class ForecastingViewController: UIViewController {
 		calculateBtn.layer.cornerRadius = 6
 		
 		outputValueLbl.layer.borderWidth = 1
-		outputValueLbl.layer.borderColor = UIColor.lightGrayColor().CGColor
+		outputValueLbl.layer.borderColor = UIColor.lightGray.cgColor
 		
-		invalidInput.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
-		invalidYearInput.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
-		unknownError.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+		invalidInput.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+		invalidYearInput.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+		unknownError.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
     }
 	
-	override func viewWillAppear(animated: Bool) {
+	override func viewWillAppear(_ animated: Bool) {
 		if keyboardIsDark {
-			inputValueTextField.keyboardAppearance = UIKeyboardAppearance.Dark
-			annualRateTextField.keyboardAppearance = UIKeyboardAppearance.Dark
-			futureYearTextField.keyboardAppearance = UIKeyboardAppearance.Dark
+			inputValueTextField.keyboardAppearance = UIKeyboardAppearance.dark
+			annualRateTextField.keyboardAppearance = UIKeyboardAppearance.dark
+			futureYearTextField.keyboardAppearance = UIKeyboardAppearance.dark
 		} else {
-			inputValueTextField.keyboardAppearance = UIKeyboardAppearance.Default
-			annualRateTextField.keyboardAppearance = UIKeyboardAppearance.Default
-			futureYearTextField.keyboardAppearance = UIKeyboardAppearance.Default
+			inputValueTextField.keyboardAppearance = UIKeyboardAppearance.default
+			annualRateTextField.keyboardAppearance = UIKeyboardAppearance.default
+			futureYearTextField.keyboardAppearance = UIKeyboardAppearance.default
 		}
 		addKeyboardToolbar()
 	}
@@ -167,7 +167,7 @@ class ForecastingViewController: UIViewController {
 				result += value * rate
 			}
 			
-			numberFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
+			numberFormatter.numberStyle = NumberFormatter.Style.currency
 			numberFormatter.currencySymbol = currencySymbol + " "
 			
 			if !isYen {
@@ -178,38 +178,38 @@ class ForecastingViewController: UIViewController {
 				numberFormatter.maximumFractionDigits = 0
 			}
 			
-			outputValueLbl.text = numberFormatter.stringFromNumber(result)
+            outputValueLbl.text = numberFormatter.string(from: NSNumber(value: result))
 			
-			UIView.animateWithDuration(0.4, animations: {
-				self.outputValueLbl.layer.backgroundColor = UIColor(red: 0.0/255.0, green: 235.0/255.0, blue: 160.0/255.0, alpha: 1.0).CGColor
+			UIView.animate(withDuration: 0.4, animations: {
+				self.outputValueLbl.layer.backgroundColor = UIColor(red: 0.0/255.0, green: 235.0/255.0, blue: 160.0/255.0, alpha: 1.0).cgColor
 			})
 			
-			UIView.animateWithDuration(0.6, animations: {
-				self.outputValueLbl.layer.backgroundColor = UIColor.whiteColor().CGColor
+			UIView.animate(withDuration: 0.6, animations: {
+				self.outputValueLbl.layer.backgroundColor = UIColor.white.cgColor
 			})
 		} else {
-			self.presentViewController(invalidYearInput, animated: true, completion: nil)
+			self.present(invalidYearInput, animated: true, completion: nil)
 		}
 	}
 
 	func addKeyboardToolbar() {
-		let toolbar: UIToolbar = UIToolbar(frame: CGRectMake(0, 0, 320, 50))
+		let toolbar: UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
 		
 		if keyboardIsDark {
-			toolbar.barStyle = UIBarStyle.Black
+			toolbar.barStyle = UIBarStyle.black
 		} else {
-			toolbar.barStyle = UIBarStyle.Default
+			toolbar.barStyle = UIBarStyle.default
 		}
 		
 		if keyboardToolbarIsTranslucent {
-			toolbar.translucent = true
+			toolbar.isTranslucent = true
 		} else {
-			toolbar.translucent = false
+			toolbar.isTranslucent = false
 		}
 		
-		let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-		var done = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: #selector(ForecastingViewController.doneBtnPressedValueTextField))
-		var cancel = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ForecastingViewController.cancelBtnPressedValueTextField))
+		let flexSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
+		var done = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(ForecastingViewController.doneBtnPressedValueTextField))
+		var cancel = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(ForecastingViewController.cancelBtnPressedValueTextField))
 		
 		var items = [UIBarButtonItem]()
 		items.append(cancel)
@@ -217,13 +217,13 @@ class ForecastingViewController: UIViewController {
 		items.append(done)
 		
 		toolbar.items = items
-		toolbar.userInteractionEnabled = true
+		toolbar.isUserInteractionEnabled = true
 		toolbar.sizeToFit()
 		
 		inputValueTextField.inputAccessoryView = toolbar
 		
-		done = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: #selector(ForecastingViewController.doneBtnPressedRateTextField))
-		cancel = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ForecastingViewController.cancelBtnPressedRateTextField))
+		done = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(ForecastingViewController.doneBtnPressedRateTextField))
+		cancel = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(ForecastingViewController.cancelBtnPressedRateTextField))
 		
 		items.removeAll()
 		items.append(cancel)
@@ -232,8 +232,8 @@ class ForecastingViewController: UIViewController {
 		
 		annualRateTextField.inputAccessoryView = toolbar
 		
-		done = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: #selector(ForecastingViewController.doneBtnPressedFutureYearTextField))
-		cancel = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(ForecastingViewController.cancelBtnPressedFutureYearTextField))
+		done = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.done, target: self, action: #selector(ForecastingViewController.doneBtnPressedFutureYearTextField))
+		cancel = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.plain, target: self, action: #selector(ForecastingViewController.cancelBtnPressedFutureYearTextField))
 		
 		items.removeAll()
 		items.append(cancel)

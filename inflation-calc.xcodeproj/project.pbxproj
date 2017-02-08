@@ -134,6 +134,7 @@
 					55E930641D27C63800300FF7 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = 8RAKA8JZ29;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -303,6 +304,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liamnickell.inflation-calc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -314,6 +316,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.liamnickell.inflation-calc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

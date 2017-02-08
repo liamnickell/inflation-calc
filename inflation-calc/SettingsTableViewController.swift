@@ -19,22 +19,22 @@ class SettingsTableViewController: UITableViewController {
 	@IBOutlet weak var doneBtnCalculatesLbl: UILabel!
 	@IBOutlet weak var doneBtnForecastsLbl: UILabel!
 	
-	let defaults = NSUserDefaults.standardUserDefaults()
+	let defaults = UserDefaults.standard
 	
-	@IBAction func blackKeyboard(sender: AnyObject) {
-		defaults.setObject(darkKeyboard.on, forKey: "darkKeyboard")
+	@IBAction func blackKeyboard(_ sender: AnyObject) {
+		defaults.set(darkKeyboard.isOn, forKey: "darkKeyboard")
 	}
 	
-	@IBAction func translucentKeyboardToolbar(sender: AnyObject) {
-		defaults.setObject(translucentKeyboardToolbar.on, forKey: "translucentKeyboardToolbar")
+	@IBAction func translucentKeyboardToolbar(_ sender: AnyObject) {
+		defaults.set(translucentKeyboardToolbar.isOn, forKey: "translucentKeyboardToolbar")
 	}
 	
-	@IBAction func doneBtnCalculates(sender: AnyObject) {
-		defaults.setObject(doneBtnCalculates.on, forKey: "doneBtn")
+	@IBAction func doneBtnCalculates(_ sender: AnyObject) {
+		defaults.set(doneBtnCalculates.isOn, forKey: "doneBtn")
 	}
 	
-	@IBAction func doneBtnForecasts(sender: AnyObject) {
-		defaults.setObject(doneBtnForecasts.on, forKey: "doneBtnForecasts")
+	@IBAction func doneBtnForecasts(_ sender: AnyObject) {
+		defaults.set(doneBtnForecasts.isOn, forKey: "doneBtnForecasts")
 	}
 	
     override func viewDidLoad() {
@@ -46,27 +46,27 @@ class SettingsTableViewController: UITableViewController {
 		doneBtnForecastsLbl.adjustsFontSizeToFitWidth = true
 	}
 	
-	override func viewWillAppear(animated: Bool) {
-		if defaults.objectForKey("darkKeyboard") != nil && defaults.objectForKey("translucentKeyboardToolbar") != nil && defaults.objectForKey("doneBtn") != nil && defaults.objectForKey("doneBtnForecasts") != nil {
-			darkKeyboard.on = defaults.objectForKey("darkKeyboard") as! Bool
-			translucentKeyboardToolbar.on = defaults.objectForKey("translucentKeyboardToolbar") as! Bool
-			doneBtnCalculates.on = defaults.objectForKey("doneBtn") as! Bool
-			doneBtnForecasts.on = defaults.objectForKey("doneBtnForecasts") as! Bool
+	override func viewWillAppear(_ animated: Bool) {
+		if defaults.object(forKey: "darkKeyboard") != nil && defaults.object(forKey: "translucentKeyboardToolbar") != nil && defaults.object(forKey: "doneBtn") != nil && defaults.object(forKey: "doneBtnForecasts") != nil {
+			darkKeyboard.isOn = defaults.object(forKey: "darkKeyboard") as! Bool
+			translucentKeyboardToolbar.isOn = defaults.object(forKey: "translucentKeyboardToolbar") as! Bool
+			doneBtnCalculates.isOn = defaults.object(forKey: "doneBtn") as! Bool
+			doneBtnForecasts.isOn = defaults.object(forKey: "doneBtnForecasts") as! Bool
 		} else {
-			defaults.setObject(darkKeyboard.on, forKey: "darkKeyboard")
-			defaults.setObject(translucentKeyboardToolbar.on, forKey: "translucentKeyboardToolbar")
-			defaults.setObject(doneBtnCalculates.on, forKey: "doneBtn")
-			defaults.setObject(doneBtnForecasts.on, forKey: "doneBtnForecasts")
+			defaults.set(darkKeyboard.isOn, forKey: "darkKeyboard")
+			defaults.set(translucentKeyboardToolbar.isOn, forKey: "translucentKeyboardToolbar")
+			defaults.set(doneBtnCalculates.isOn, forKey: "doneBtn")
+			defaults.set(doneBtnForecasts.isOn, forKey: "doneBtnForecasts")
 		}
 	}
 	
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		let destinationVC = segue.destinationViewController as! MainViewController
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		let destinationVC = segue.destination as! MainViewController
 		
-		destinationVC.defaults.setObject(darkKeyboard.on, forKey: "darkKeyboard")
-		destinationVC.defaults.setObject(translucentKeyboardToolbar.on, forKey: "translucentKeyboardToolbar")
-		destinationVC.defaults.setObject(doneBtnCalculates.on, forKey: "doneBtn")
-		destinationVC.defaults.setObject(doneBtnForecasts.on, forKey: "doneBtnForecasts")
+		destinationVC.defaults.set(darkKeyboard.isOn, forKey: "darkKeyboard")
+		destinationVC.defaults.set(translucentKeyboardToolbar.isOn, forKey: "translucentKeyboardToolbar")
+		destinationVC.defaults.set(doneBtnCalculates.isOn, forKey: "doneBtn")
+		destinationVC.defaults.set(doneBtnForecasts.isOn, forKey: "doneBtnForecasts")
 	}
 
 }
